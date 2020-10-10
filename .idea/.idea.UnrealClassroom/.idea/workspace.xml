@@ -35,125 +35,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="693bffca-4724-42ba-bf9a-8924c2fe9346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/Foliage_Material/Foliage_Material.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/AO.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Albedo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Displacement.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Metalness.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Normal.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Roughness.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/noise_mask.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/noise_normal.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_DetailNormalTiling.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_MapAdjustments.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_Tiling.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_Transmission.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/MS_DefaultMaterial.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/BP_UnrealClassroomGameModeBase.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HammeringPawn.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/AS_MannequinHand_Right_CanGrab.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/AS_MannequinHand_Right_Grab.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/AS_MannequinHand_Right_Open.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/BS_RightGrip.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/M_HandMat.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/PA_MannequinHand_Right.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/SK_MannequinHand_Right.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/SM_MannequinHand_Right.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/T_UE4_Mannequin_MAT_MASKA.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/T_UE4_Mannequin_N.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pickups/BP_PickupHammer.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/BaseObjects/UnitBox.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/BaseObjects/UnitBox.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Birch_Log_00/Birch_Log_00_inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Birch_Log_00/S_TreeTrunk.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Birch_Log_00/ti2fbajfa_2K_Albedo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Birch_Log_00/ti2fbajfa_2K_NormalLOD0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Birch_Log_00/ti2fbajfa_2K_Roughness.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/Foliage/ricaS_LOD3_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/Foliage/ricaS_LOD3_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/Foliage/ricaS_LOD3_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/Foliage/ricaS_LOD3_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/Foliage/ricaS_LOD3_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/Old_Wood_Boards_00_inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/S_TreeBoard_A.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/ricaS_2K_Albedo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/ricaS_2K_NormalLOD0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/ricaS_2K_Roughness.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/ricaS_LOD3_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/ricaS_LOD3_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/ricaS_LOD3_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/ricaS_LOD3_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Old_Wood_Boards_00/ricaS_LOD3_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_00/Pine_Tree_Stump_00_inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_00/tjswbbdfa_2K_Albedo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_00/tjswbbdfa_2K_NormalLOD0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_00/tjswbbdfa_2K_Roughness.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_00/tjswbbdfa_LOD0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_01/Pine_Tree_Stump_01_inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_01/tjswbbdfa_2K_Albedo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_01/tjswbbdfa_2K_NormalLOD0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_01/tjswbbdfa_2K_Roughness.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Pine_Tree_Stump_01/tjswbbdfa_LOD0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Rusty_Stake_00/Rusty_Stake_00_inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Rusty_Stake_00/S_Nail.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Rusty_Stake_00/tkqmdbnhw_2K_AO.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Rusty_Stake_00/tkqmdbnhw_2K_Albedo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Rusty_Stake_00/tkqmdbnhw_2K_NormalLOD5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Assets/Rusty_Stake_00/tkqmdbnhw_2K_Roughness.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/Foliage/tebqbd0r_Var1_LOD0_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/Foliage/tebqbd0r_Var2_LOD0_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/Foliage/tebqbd0r_Var3_LOD0_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/Foliage/tebqbd0r_Var4_LOD0_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/Foliage/tebqbd0r_Var5_LOD0_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/Foliage/tebqbd0r_Var6_LOD0_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/Foliage/tebqbd0r_Var7_LOD0_7.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/Lily_Turf_00_inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_2K_AO.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_2K_Albedo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_2K_Normal.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_2K_Opacity.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_2K_Roughness.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_2K_Translucency.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_Var1_LOD0_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_Var2_LOD0_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_Var3_LOD0_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_Var4_LOD0_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_Var5_LOD0_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_Var6_LOD0_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/3D_Plants/Lily_Turf_00/tebqbd0r_Var7_LOD0_7.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupInterface.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringStatics.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Core/BP_UnrealClassroomGameModeBase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/holographic_controller.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/holographic_controller.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/knuckles.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/knuckles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/oculus_touch.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/oculus_touch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/steamvr_manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/steamvr_manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/vive_controller.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/vive_controller.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/vive_tracker_camera.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/vive_tracker_camera.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Animations/MannequinHand_Right_CanGrab.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Animations/MannequinHand_Right_Grab.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Animations/MannequinHand_Right_Open.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Animations/RightGrip_BS.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Animations/RightHand_AnimBP.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Character/Materials/M_HandMat.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Character/Mesh/MannequinHand_Right.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Character/Mesh/MannequinHand_Right.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Character/Mesh/MannequinHand_Right_PhysicsAsset.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Character/Mesh/MannequinHand_Right_Skeleton.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Character/Textures/UE4_Mannequin_MAT_MASKA.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualReality/Mannequin/Character/Textures/UE4_Mannequin__normals.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualRealityBP/Blueprints/BP_MotionController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/DefaultVR/VirtualRealityBP/Blueprints/BP_MotionController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/Default_P.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/Default_P.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealClassroom.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealClassroom.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/BP_UnrealClassroomGameModeBase.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/BS_RightGrip.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/BS_RightGrip.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,8 +62,12 @@
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HandPawn_AnimInstance.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandPawn_AnimInstance.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HandPawnAnimInstance.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandPawnAnimInstance.h" />
       </list>
     </option>
   </component>
@@ -419,6 +312,7 @@
       <workItem from="1602103729618" duration="11293000" />
       <workItem from="1602176684154" duration="170000" />
       <workItem from="1602176934291" duration="8603000" />
+      <workItem from="1602330494109" duration="4985000" />
     </task>
     <servers />
   </component>

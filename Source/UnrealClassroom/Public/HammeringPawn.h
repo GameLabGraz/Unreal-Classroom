@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -14,6 +12,8 @@ class UMotionControllerComponent;
 class USphereComponent;
 class UCameraComponent;
 
+constexpr float GripOpen = 0.0f;
+constexpr float GripClose = 1.0f;
 
 UCLASS()
 class UNREALCLASSROOM_API AHammeringPawn : public APawn
@@ -33,6 +33,9 @@ protected:
     void OnReleaseRight();
     void OnReleaseLeft();
 
+    float LeftGripStat = 0.0f;
+    float RightGripStat = 0.0f;
+
     void GrabAxisRight(float AxisValue);
 
     UPROPERTY(EditAnywhere, Category = "Debuging")
@@ -49,6 +52,8 @@ public:
 
     // Called to bind functionality to input
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+    FORCEINLINE float GetGripStat(const bool bIsRightHanded) {return bIsRightHanded? RightGripStat : LeftGripStat;}
 
 
 #pragma region components

@@ -86,10 +86,12 @@ void AHammeringPawn::OnGrabRight()
     if (RightAttachedPickup != nullptr)
     {
         RightAttachedPickup->GrabPressed(RightGrabSphere);
-
+        RightGripStat = GripClose;
+        
         if(RightAttachedPickup == LeftAttachedPickup)
         { 
             LeftAttachedPickup = nullptr;
+            LeftGripStat = GripOpen;
         }
     }
 }
@@ -111,10 +113,12 @@ void AHammeringPawn::OnGrabLeft()
     if (LeftAttachedPickup != nullptr)
     {
         LeftAttachedPickup->GrabPressed(LeftGrabSphere);
-
+        LeftGripStat = GripClose;
+        
         if(RightAttachedPickup == LeftAttachedPickup)
         {
             RightAttachedPickup = nullptr;
+            RightGripStat = GripOpen;
         }
     }
 }
@@ -125,6 +129,7 @@ void AHammeringPawn::OnReleaseRight()
     {
         RightAttachedPickup->GrabReleased();
         RightAttachedPickup = nullptr;
+        RightGripStat = GripOpen;
     }
 }
 
@@ -134,6 +139,7 @@ void AHammeringPawn::OnReleaseLeft()
     {
         LeftAttachedPickup->GrabReleased();
         LeftAttachedPickup = nullptr;
+        LeftGripStat = GripOpen;
     }
 }
 
