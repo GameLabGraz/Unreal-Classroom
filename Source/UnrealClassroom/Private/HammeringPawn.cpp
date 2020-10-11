@@ -143,16 +143,32 @@ void AHammeringPawn::OnReleaseLeft()
     }
 }
 
-void AHammeringPawn::GrabAxisRight(float AxisValue)
+void AHammeringPawn::GrabAxisRight(const float AxisValue)
 {
     if (IsShowingDebug)
     {
         UE_LOG(LogTemp, Log, TEXT("Axis Value %f"), AxisValue);
         if (GEngine)
         {
-            GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Red, FString::Printf(TEXT("Axis Value %f"), AxisValue));
+            GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Blue, FString::Printf(TEXT("Right Axis Value %f"), AxisValue));
         }
     }
+    
+    RightGripStat = AxisValue;
+}
+
+void AHammeringPawn::GrabAxisLeft(const float AxisValue)
+{
+    if (IsShowingDebug)
+    {
+        UE_LOG(LogTemp, Log, TEXT("Axis Value %f"), AxisValue);
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Red, FString::Printf(TEXT("Left Axis Value %f"), AxisValue));
+        }
+    }
+
+    LeftGripStat = AxisValue;
 }
 
 AActor* AHammeringPawn::GetNearestOverlappingPickup(USphereComponent* SphereComponent)
@@ -194,4 +210,5 @@ void AHammeringPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
     PlayerInputComponent->BindAction("GrabLeft", IE_Released, this, &AHammeringPawn::OnReleaseLeft);
 
     PlayerInputComponent->BindAxis("GrabAxisRight", this, &AHammeringPawn::GrabAxisRight);
+    PlayerInputComponent->BindAxis("GrabAxisLeft", this, &AHammeringPawn::GrabAxisLeft);
 }

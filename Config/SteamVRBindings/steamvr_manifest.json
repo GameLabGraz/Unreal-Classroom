@@ -88,6 +88,10 @@
 		{
 			"name": "/actions/main/in/GrabAxisRight axis",
 			"type": "vector1"
+		},
+		{
+			"name": "/actions/main/in/GrabAxisLeft axis",
+			"type": "vector1"
 		}
 	],
 	"action_sets": [
@@ -207,6 +211,7 @@
 			"/actions/main/in/GrabRight": "GrabRight",
 			"/actions/main/in/GrabLeft": "GrabLeft",
 			"/actions/main/in/GrabAxisRight axis": "GrabAxisRight",
+			"/actions/main/in/GrabAxisLeft axis": "GrabAxisLeft",
 			"/actions/main": "Main Game Actions"
 		}
 	]

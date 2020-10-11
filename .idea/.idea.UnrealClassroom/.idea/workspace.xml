@@ -35,14 +35,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="693bffca-4724-42ba-bf9a-8924c2fe9346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Core/BP_UnrealClassroomGameModeBase.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HammeringPawnAnimInstance_Left.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HammeringPawnAnimInstance_Right.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawnAnimInstance.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/BP_UnrealClassroomGameModeBase.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/BS_RightGrip.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/Hand/BS_RightGrip.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/steamvr_manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/steamvr_manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/vive_controller.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/vive_controller.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/SteamVRBindings/vive_tracker_camera.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/SteamVRBindings/vive_tracker_camera.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HammeringPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HammeringPawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/Default_P.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/Default_P.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HandPawnAnimInstance.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandPawnAnimInstance.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +71,12 @@
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HandPawn_AnimInstance.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandPawn_AnimInstance.h" />
-        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" />
-        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HandPawnAnimInstance.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandPawnAnimInstance.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawnAnimInstance.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawnAnimInstance.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" />
       </list>
     </option>
   </component>

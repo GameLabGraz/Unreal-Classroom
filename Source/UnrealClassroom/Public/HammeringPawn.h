@@ -28,6 +28,9 @@ protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
 
+    UPROPERTY(EditAnywhere, Category = "Debuging")
+    bool IsShowingDebug = true;
+
     void OnGrabRight();
     void OnGrabLeft();
     void OnReleaseRight();
@@ -37,9 +40,7 @@ protected:
     float RightGripStat = 0.0f;
 
     void GrabAxisRight(float AxisValue);
-
-    UPROPERTY(EditAnywhere, Category = "Debuging")
-    bool IsShowingDebug = true;
+    void GrabAxisLeft(float AxisValue);
 
     IPickupInterface* LeftAttachedPickup;
     IPickupInterface* RightAttachedPickup;
@@ -54,7 +55,6 @@ public:
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
     FORCEINLINE float GetGripStat(const bool bIsRightHanded) {return bIsRightHanded? RightGripStat : LeftGripStat;}
-
 
 #pragma region components
 
