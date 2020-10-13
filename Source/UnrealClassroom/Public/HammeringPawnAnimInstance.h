@@ -17,6 +17,9 @@ struct FHammeringPawnAnimInstanceProxy : public FAnimInstanceProxy
 	
 	UPROPERTY(Transient, BlueprintReadOnly, VisibleAnywhere)
 	float Grip = 0.0f;
+
+	UPROPERTY(Transient, BlueprintReadOnly, VisibleAnywhere)
+	int TypeOfGrab = 0.0f;
 };
 
 UCLASS()
@@ -27,11 +30,11 @@ class UNREALCLASSROOM_API UHammeringPawnAnimInstance : public UAnimInstance
 protected:
 
 	UPROPERTY(Transient, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
-	FHammeringPawnAnimInstanceProxy Proxy;
+	FHammeringPawnAnimInstanceProxy GripProxy;
 
 	virtual FAnimInstanceProxy* CreateAnimInstanceProxy() override
 	{
-		return &Proxy;
+		return &GripProxy;
 	}
 
 	virtual void DestroyAnimInstanceProxy(FAnimInstanceProxy* InProxy) override {}

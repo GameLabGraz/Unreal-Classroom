@@ -212,3 +212,15 @@ void AHammeringPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
     PlayerInputComponent->BindAxis("GrabAxisRight", this, &AHammeringPawn::GrabAxisRight);
     PlayerInputComponent->BindAxis("GrabAxisLeft", this, &AHammeringPawn::GrabAxisLeft);
 }
+
+int AHammeringPawn::GetTypeOfGrab(const bool bIsRightHanded) const
+{
+    if(bIsRightHanded)
+    {
+        if(RightAttachedPickup!=nullptr){return RightAttachedPickup->GetGrabType();}
+        return EGrabType::Controller;
+    }
+    
+    if(LeftAttachedPickup!=nullptr){return LeftAttachedPickup->GetGrabType();}
+    return EGrabType::Controller;
+}

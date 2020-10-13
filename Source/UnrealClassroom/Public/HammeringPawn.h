@@ -3,6 +3,8 @@
 #include "CoreMinimal.h"
 
 
+
+#include "PickupActor.h"
 #include "PickupInterface.h"
 #include "GameFramework/Pawn.h"
 #include "HammeringPawn.generated.h"
@@ -55,6 +57,7 @@ public:
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
     FORCEINLINE float GetGripStat(const bool bIsRightHanded) {return bIsRightHanded? RightGripStat : LeftGripStat;}
+    int GetTypeOfGrab(const bool bIsRightHanded) const;
 
 #pragma region components
 

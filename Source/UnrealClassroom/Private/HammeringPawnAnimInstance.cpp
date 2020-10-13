@@ -10,6 +10,7 @@ void FHammeringPawnAnimInstanceProxy::PreUpdate(UAnimInstance* InAnimInstance, c
         if(IsValid(AnimInstance->Pawn))
         {
             Grip = AnimInstance->Pawn->GetGripStat(AnimInstance->bIsRightHanded);
+            TypeOfGrab = AnimInstance->Pawn->GetTypeOfGrab(AnimInstance->bIsRightHanded);
         }
     }
 }

@@ -1,4 +1,5 @@
 #include "PickupActor.h"
+#include "Components/SphereComponent.h"
 
 #include "HammeringStatics.h"
 
@@ -17,12 +18,28 @@ APickupActor::APickupActor()
 	StaticMeshComponent->SetCollisionResponseToChannel(ECC_WorldDynamic,ECR_Overlap);
 	StaticMeshComponent->SetCollisionResponseToChannel(ECC_Grabbable,ECR_Block);
 	StaticMeshComponent->SetSimulatePhysics(true);
+
+	CustomAttachPoint = CreateDefaultSubobject<USphereComponent>(TEXT("CustomAttachPoint"));
+	CustomAttachPoint->SetupAttachment(StaticMeshComponent);
+	CustomAttachPoint->SetSphereRadius(10.0f);
+	CustomAttachPoint->SetCollisionResponseToAllChannels(ECR_Ignore);
+	CustomAttachPoint->ShapeColor = FColor::Emerald;
+	CustomAttachPoint->SetHiddenInGame(true);
+	
 }
 
 void APickupActor::GrabPressed(USceneComponent* AttachTo)
 {
 	StaticMeshComponent->SetSimulatePhysics(false);
-	StaticMeshComponent->AttachToComponent(AttachTo,FAttachmentTransformRules::KeepWorldTransform);
+
+	if(bSnapToHand)
+	{
+		StaticMeshComponent->AttachToComponent(AttachTo,FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	}
+	else
+	{
+		StaticMeshComponent->AttachToComponent(AttachTo,FAttachmentTransformRules::KeepWorldTransform);
+	}
 }
 
 void APickupActor::GrabReleased()
@@ -30,10 +47,43 @@ void APickupActor::GrabReleased()
 	StaticMeshComponent->SetSimulatePhysics(true);	
 }
 
+int APickupActor::GetGrabType()
+{
+	switch (TypeOfGrab)
+	{
+		case EGrabType::Controller:
+			return 0;
+			break;
+		case EGrabType::Box:
+			return 1;
+			break;
+		case EGrabType::Bow:
+			return 2;
+		case EGrabType::Sphere:
+			return 3;
+		default:
+			return 0;
+	}
+}
+
 void APickupActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	if(bIsShowingDebug)
+	{
+		CustomAttachPoint->SetHiddenInGame(false);
+	}
+}
+
+FVector APickupActor::GetCustomAttachLocation() const
+{
+	return CustomAttachPoint->GetComponentLocation();
+}
+
+FRotator APickupActor::GetCustomAttachRotation() const
+{
+	return CustomAttachPoint->GetComponentRotation();
 }
 
 void APickupActor::Tick(float DeltaTime)
