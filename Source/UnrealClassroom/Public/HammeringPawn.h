@@ -3,16 +3,19 @@
 #include "CoreMinimal.h"
 
 
-
 #include "PickupActor.h"
 #include "PickupInterface.h"
 #include "GameFramework/Pawn.h"
 #include "HammeringPawn.generated.h"
 
 
+class UCapsuleComponent;
+class USplineComponent;
+class USplineMeshComponent;
 class UMotionControllerComponent;
 class USphereComponent;
 class UCameraComponent;
+class UArrowComponent;
 
 constexpr float GripOpen = 0.0f;
 constexpr float GripClose = 1.0f;
@@ -29,14 +32,27 @@ public:
 protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
+    
+    bool bIsTrackingRightAxis = true;
+    bool bIsTrackingLeftAxis = true;
 
-    UPROPERTY(EditAnywhere, Category = "Debuging")
-    bool IsShowingDebug = true;
+    bool bIsHitTeleportTarget = false;
+    bool bIsUpdatingTeleportDestination = false;
+    bool bIsDestinationFound = false;
+    bool bIsRightHandDoTeleportation = true;
 
     void OnGrabRight();
     void OnGrabLeft();
     void OnReleaseRight();
     void OnReleaseLeft();
+
+    void OnPressTeleportRight();
+    void OnReleaseTeleportRight();
+    void OnPressTeleportLeft();
+    void OnReleaseTeleportLeft();
+
+    void UpdateDestinationMarker();
+    void BeginTeleport();
 
     float LeftGripStat = 0.0f;
     float RightGripStat = 0.0f;
@@ -49,6 +65,7 @@ protected:
 
     static AActor* GetNearestOverlappingPickup(USphereComponent* SphereComponent);
 
+    FRotator InitialRotationOfController = FRotator::ZeroRotator;
 public:
     // Called every frame
     virtual void Tick(float DeltaTime) override;
@@ -56,8 +73,50 @@ public:
     // Called to bind functionality to input
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-    FORCEINLINE float GetGripStat(const bool bIsRightHanded) {return bIsRightHanded? RightGripStat : LeftGripStat;}
+    FORCEINLINE float GetGripStat(const bool bIsRightHanded) { return bIsRightHanded ? RightGripStat : LeftGripStat; }
     int GetTypeOfGrab(const bool bIsRightHanded) const;
+
+protected:
+    UPROPERTY(EditAnywhere, Category = "Debuging")
+    bool IsShowingDebug = true;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    float MaxTeleportDistance = 1000.0f;
+    
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    float TeleportBeginOffset = 20.0f;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    float TeleportFadeDelay = 1.0f;
+    
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    float TeleportLaunchVelocity = 900.0f;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    TArray<AActor*> ActorsToIgnore;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    FVector ProjectNavigationExtend = FVector(500.0f, 500.0f, 500.0f);
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    UHapticFeedbackEffect_Base* TeleportationHaptic;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    float TeleportHapticIntensity = 0.3f;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    float CameraFadeDuration = 0.1f;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    FColor CameraFadeColor = FColor::Black;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    bool bTracePath = true;
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    bool bTraceComplex = false;
 
 #pragma region components
 
@@ -71,6 +130,9 @@ public:
     USphereComponent* RightGrabSphere;
 
     UPROPERTY(VisibleAnywhere)
+    UArrowComponent* RightArcDirection;
+
+    UPROPERTY(VisibleAnywhere)
     UMotionControllerComponent* RightMotionControllerComponent;
 
     UPROPERTY(VisibleAnywhere)
@@ -80,13 +142,22 @@ public:
     USphereComponent* LeftGrabSphere;
 
     UPROPERTY(VisibleAnywhere)
+    UArrowComponent* LeftArcDirection;
+
+    UPROPERTY(VisibleAnywhere)
     UMotionControllerComponent* LeftMotionControllerComponent;
 
     UPROPERTY(VisibleAnywhere)
     USceneComponent* VROffset;
 
+    // UPROPERTY(VisibleAnywhere)
+    // USceneComponent* RootSceneComponent;
+    
     UPROPERTY(VisibleAnywhere)
-    USceneComponent* RootSceneComponent;
+    UCapsuleComponent* PawnBody;
+
+    UPROPERTY(VisibleAnywhere)
+    UStaticMeshComponent* TeleportationIndicator;
 
 #pragma endregion
 };

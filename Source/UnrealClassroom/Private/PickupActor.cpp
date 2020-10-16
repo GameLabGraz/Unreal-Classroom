@@ -49,21 +49,7 @@ void APickupActor::GrabReleased()
 
 int APickupActor::GetGrabType()
 {
-	switch (TypeOfGrab)
-	{
-		case EGrabType::Controller:
-			return 0;
-			break;
-		case EGrabType::Box:
-			return 1;
-			break;
-		case EGrabType::Bow:
-			return 2;
-		case EGrabType::Sphere:
-			return 3;
-		default:
-			return 0;
-	}
+	return TypeOfGrab;
 }
 
 void APickupActor::BeginPlay()
@@ -86,7 +72,7 @@ FRotator APickupActor::GetCustomAttachRotation() const
 	return CustomAttachPoint->GetComponentRotation();
 }
 
-void APickupActor::Tick(float DeltaTime)
+void APickupActor::Tick(const float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 

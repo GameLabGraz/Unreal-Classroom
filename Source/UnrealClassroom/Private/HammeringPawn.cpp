@@ -1,21 +1,37 @@
 #include "HammeringPawn.h"
 
+#include "Components/ArrowComponent.h"
 #include "Camera/CameraComponent.h"
 #include "MotionControllerComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/SphereComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/SplineMeshComponent.h"
 #include "HammeringStatics.h"
+#include "Kismet/GameplayStatics.h"
+#include "NavigationSystem.h"
 
 
 AHammeringPawn::AHammeringPawn()
 {
     PrimaryActorTick.bCanEverTick = true;
 
-    RootSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
-    SetRootComponent(RootSceneComponent);
+    // RootSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
+    // SetRootComponent(RootSceneComponent);
+
+    PawnBody = CreateDefaultSubobject<UCapsuleComponent>(TEXT("PawnBody"));
+    SetRootComponent(PawnBody);
+    // PawnBody->SetupAttachment(GetRootComponent());
+    PawnBody->SetCapsuleRadius(34);
+    PawnBody->SetCapsuleHalfHeight(88);
+    PawnBody->SetSimulatePhysics(true);
 
     VROffset = CreateDefaultSubobject<USceneComponent>(TEXT("VROffset"));
     VROffset->SetupAttachment(GetRootComponent());
+
+    TeleportationIndicator = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TeleportationIndicator"));
+    TeleportationIndicator->SetupAttachment(VROffset);
+
 
     CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
     CameraComponent->SetupAttachment(VROffset);
@@ -38,6 +54,8 @@ AHammeringPawn::AHammeringPawn()
     LeftGrabSphere->SetCollisionResponseToAllChannels(ECR_Ignore);
     LeftGrabSphere->SetCollisionResponseToChannel(ECC_Grabbable, ECR_Overlap);
 
+    LeftArcDirection = CreateDefaultSubobject<UArrowComponent>(TEXT("LeftArcDirection"));
+    LeftArcDirection->SetupAttachment(LeftHandMesh);
 
     RightMotionControllerComponent = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("RightMotionController"));
     RightMotionControllerComponent->SetupAttachment(VROffset);
@@ -56,6 +74,12 @@ AHammeringPawn::AHammeringPawn()
     RightGrabSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
     RightGrabSphere->SetCollisionResponseToAllChannels(ECR_Ignore);
     RightGrabSphere->SetCollisionResponseToChannel(ECC_Grabbable, ECR_Overlap);
+
+    RightArcDirection = CreateDefaultSubobject<UArrowComponent>(TEXT("RightArcDirection"));
+    RightArcDirection->SetupAttachment(RightHandMesh);
+
+    ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
+    ActorsToIgnore.Add(nullptr);
 }
 
 void AHammeringPawn::BeginPlay()
@@ -67,6 +91,8 @@ void AHammeringPawn::BeginPlay()
         RightGrabSphere->SetHiddenInGame(false);
         LeftGrabSphere->SetHiddenInGame(false);
     }
+
+    TeleportationIndicator->SetVisibility(false);
 }
 
 void AHammeringPawn::OnGrabRight()
@@ -87,9 +113,9 @@ void AHammeringPawn::OnGrabRight()
     {
         RightAttachedPickup->GrabPressed(RightGrabSphere);
         RightGripStat = GripClose;
-        
-        if(RightAttachedPickup == LeftAttachedPickup)
-        { 
+
+        if (RightAttachedPickup == LeftAttachedPickup)
+        {
             LeftAttachedPickup = nullptr;
             LeftGripStat = GripOpen;
         }
@@ -114,8 +140,8 @@ void AHammeringPawn::OnGrabLeft()
     {
         LeftAttachedPickup->GrabPressed(LeftGrabSphere);
         LeftGripStat = GripClose;
-        
-        if(RightAttachedPickup == LeftAttachedPickup)
+
+        if (RightAttachedPickup == LeftAttachedPickup)
         {
             RightAttachedPickup = nullptr;
             RightGripStat = GripOpen;
@@ -125,7 +151,7 @@ void AHammeringPawn::OnGrabLeft()
 
 void AHammeringPawn::OnReleaseRight()
 {
-    if(RightAttachedPickup != nullptr)
+    if (RightAttachedPickup != nullptr)
     {
         RightAttachedPickup->GrabReleased();
         RightAttachedPickup = nullptr;
@@ -143,28 +169,105 @@ void AHammeringPawn::OnReleaseLeft()
     }
 }
 
+void AHammeringPawn::OnPressTeleportRight()
+{
+    bIsUpdatingTeleportDestination = true;
+    bIsRightHandDoTeleportation = true;
+}
+
+
+void AHammeringPawn::OnReleaseTeleportRight()
+{
+    if (!bIsDestinationFound) { return; }
+
+    UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->StartCameraFade(
+        0, 1, TeleportFadeDelay, FColor::Black, false, true);
+
+    FTimerHandle TimerHandle;
+    GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AHammeringPawn::BeginTeleport, TeleportFadeDelay);
+
+    bIsUpdatingTeleportDestination = false;
+    TeleportationIndicator->SetVisibility(false);
+    bIsDestinationFound = false;
+}
+
+void AHammeringPawn::OnPressTeleportLeft()
+{
+}
+
+void AHammeringPawn::OnReleaseTeleportLeft()
+{
+}
+
+void AHammeringPawn::UpdateDestinationMarker()
+{
+    auto ActiveHand = bIsRightHandDoTeleportation ? RightHandMesh : LeftHandMesh;
+
+    const FVector StartPos = ActiveHand->GetComponentLocation() + ActiveHand->GetForwardVector() * TeleportBeginOffset;
+    const FVector EndPos = StartPos + ActiveHand->GetForwardVector() * MaxTeleportDistance;
+    FHitResult HitResult;
+
+    bIsHitTeleportTarget = GetWorld()->LineTraceSingleByChannel(HitResult, StartPos, EndPos, ECC_Visibility);
+
+    FNavLocation PointOnNavMeshLocation;
+    const UNavigationSystemV1* NavSystem = FNavigationSystem::GetCurrent<UNavigationSystemV1>(this);
+    const auto bIsProjectedToNavMesh = NavSystem->ProjectPointToNavigation(HitResult.Location, PointOnNavMeshLocation);
+
+    if (bIsHitTeleportTarget && bIsProjectedToNavMesh)
+    {
+        TeleportationIndicator->SetWorldLocation(PointOnNavMeshLocation.Location);
+
+        auto ForwardVector = ActiveHand->GetForwardVector();
+        ForwardVector = FVector(ForwardVector.X, ForwardVector.Y, 0);
+
+        TeleportationIndicator->SetWorldRotation(ForwardVector.Rotation());
+        TeleportationIndicator->SetVisibility(true);
+        bIsDestinationFound = true;
+    }
+    else
+    {
+        TeleportationIndicator->SetVisibility(false);
+        bIsDestinationFound = false;
+    }
+}
+
+void AHammeringPawn::BeginTeleport()
+{
+    GetRootComponent()->SetWorldLocation(
+        TeleportationIndicator->GetComponentLocation() + PawnBody->GetScaledCapsuleHalfHeight() * PawnBody->
+        GetUpVector());
+
+    UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->StartCameraFade(1, 0, TeleportFadeDelay, FColor::Black);
+}
+
 void AHammeringPawn::GrabAxisRight(const float AxisValue)
 {
+    if (!bIsTrackingRightAxis) { return; }
+
     if (IsShowingDebug)
     {
         UE_LOG(LogTemp, Log, TEXT("Axis Value %f"), AxisValue);
         if (GEngine)
         {
-            GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Blue, FString::Printf(TEXT("Right Axis Value %f"), AxisValue));
+            GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Blue,
+                                             FString::Printf(TEXT("Right Axis Value %f"), AxisValue));
         }
     }
-    
+
     RightGripStat = AxisValue;
 }
 
 void AHammeringPawn::GrabAxisLeft(const float AxisValue)
 {
+    if (!bIsTrackingLeftAxis) { return; }
+
     if (IsShowingDebug)
     {
         UE_LOG(LogTemp, Log, TEXT("Axis Value %f"), AxisValue);
         if (GEngine)
         {
-            GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Red, FString::Printf(TEXT("Left Axis Value %f"), AxisValue));
+            GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Red,
+                                             FString::Printf(TEXT("Left Axis Value %f"), AxisValue));
         }
     }
 
@@ -175,16 +278,16 @@ AActor* AHammeringPawn::GetNearestOverlappingPickup(USphereComponent* SphereComp
 {
     AActor* NearestPickup = nullptr;
     TArray<AActor*> OverlappingActors;
-    
+
     SphereComponent->GetOverlappingActors(OverlappingActors);
 
     float ShortestDistance = TNumericLimits<float>::Max();
     for (auto Actor : OverlappingActors)
     {
-        if(Actor->GetClass()->ImplementsInterface(UPickupInterface::StaticClass()))
+        if (Actor->GetClass()->ImplementsInterface(UPickupInterface::StaticClass()))
         {
             const auto Distance = FVector::Distance(SphereComponent->GetComponentLocation(), Actor->GetActorLocation());
-            if(Distance < ShortestDistance)
+            if (Distance < ShortestDistance)
             {
                 ShortestDistance = Distance;
                 NearestPickup = Actor;
@@ -198,6 +301,11 @@ AActor* AHammeringPawn::GetNearestOverlappingPickup(USphereComponent* SphereComp
 void AHammeringPawn::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
+
+    if (bIsUpdatingTeleportDestination)
+    {
+        UpdateDestinationMarker();
+    }
 }
 
 void AHammeringPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -211,16 +319,21 @@ void AHammeringPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
     PlayerInputComponent->BindAxis("GrabAxisRight", this, &AHammeringPawn::GrabAxisRight);
     PlayerInputComponent->BindAxis("GrabAxisLeft", this, &AHammeringPawn::GrabAxisLeft);
+
+    PlayerInputComponent->BindAction("TeleportRight", IE_Pressed, this, &AHammeringPawn::OnPressTeleportRight);
+    PlayerInputComponent->BindAction("TeleportRight", IE_Released, this, &AHammeringPawn::OnReleaseTeleportRight);
+    PlayerInputComponent->BindAction("TeleportLeft", IE_Pressed, this, &AHammeringPawn::OnPressTeleportLeft);
+    PlayerInputComponent->BindAction("TeleportLeft", IE_Released, this, &AHammeringPawn::OnPressTeleportLeft);
 }
 
 int AHammeringPawn::GetTypeOfGrab(const bool bIsRightHanded) const
 {
-    if(bIsRightHanded)
+    if (bIsRightHanded)
     {
-        if(RightAttachedPickup!=nullptr){return RightAttachedPickup->GetGrabType();}
+        if (RightAttachedPickup != nullptr) { return RightAttachedPickup->GetGrabType(); }
         return EGrabType::Controller;
     }
-    
-    if(LeftAttachedPickup!=nullptr){return LeftAttachedPickup->GetGrabType();}
+
+    if (LeftAttachedPickup != nullptr) { return LeftAttachedPickup->GetGrabType(); }
     return EGrabType::Controller;
 }
