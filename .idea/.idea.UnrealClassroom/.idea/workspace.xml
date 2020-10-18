@@ -39,12 +39,17 @@
   <component name="ChangeListManager">
     <list default="true" id="693bffca-4724-42ba-bf9a-8924c2fe9346" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Left.uasset" afterDir="false" />
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Right_Root_RootAction.uasset" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Right_Root_RootAction_001.uasset" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Right_Root_Root_Unreal_Take_Base_Layer_001.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_RightFull.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_RightFull.uasset" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" afterDir="false" />
+>>>>>>> DefaultVR
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" afterDir="false" />
@@ -326,7 +331,11 @@
       <workItem from="1602176934291" duration="8603000" />
       <workItem from="1602330494109" duration="4985000" />
       <workItem from="1602596832797" duration="62304000" />
+<<<<<<< HEAD
       <workItem from="1603018301536" duration="24322000" />
+=======
+      <workItem from="1603018301536" duration="23737000" />
+>>>>>>> DefaultVR
     </task>
     <servers />
   </component>
