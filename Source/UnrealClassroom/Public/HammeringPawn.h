@@ -9,6 +9,9 @@
 #include "HammeringPawn.generated.h"
 
 
+struct FPredictProjectilePathResult;
+struct FPredictProjectilePathParams;
+
 class UCapsuleComponent;
 class USplineComponent;
 class USplineMeshComponent;
@@ -32,7 +35,7 @@ public:
 protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
-    
+
     bool bIsTrackingRightAxis = true;
     bool bIsTrackingLeftAxis = true;
 
@@ -52,7 +55,12 @@ protected:
     void OnReleaseTeleportLeft();
 
     void UpdateDestinationMarker();
-    void BeginTeleport();
+    bool UpdateProjectilePath(FPredictProjectilePathParams& PathParams, FPredictProjectilePathResult& PathResult,
+                              FVector StartPos, FVector LaunchVelocityVector) const;
+    void UpdateProjectileSpline(TArray<FVector> PathPoints) const;
+    void ClearProjectilePool();
+    void UpdateProjectileMesh(TArray<FVector> PathPoints);
+    void BeginTeleport() const;
 
     float LeftGripStat = 0.0f;
     float RightGripStat = 0.0f;
@@ -66,6 +74,8 @@ protected:
     static AActor* GetNearestOverlappingPickup(USphereComponent* SphereComponent);
 
     FRotator InitialRotationOfController = FRotator::ZeroRotator;
+
+
 public:
     // Called every frame
     virtual void Tick(float DeltaTime) override;
@@ -82,15 +92,33 @@ protected:
 
     UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
     float MaxTeleportDistance = 1000.0f;
-    
+
     UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
     float TeleportBeginOffset = 20.0f;
 
     UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
     float TeleportFadeDelay = 1.0f;
-    
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    float ProjectileDuration = 10.0f;
+
     UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
     float TeleportLaunchVelocity = 900.0f;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    float ProjectilePathRadius = 5.0f;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    bool bIsTraceComplex = true;
+
+    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
+    bool bIsShowProjectionDebug = true;
+
+    UPROPERTY(EditDefaultsOnly, Category = "[Properties]: Teleportation")
+    UStaticMesh* TeleportProjectileMesh;
+
+    UPROPERTY(EditDefaultsOnly, Category = "[Properties]: Teleportation")
+    UMaterialInterface* TeleportProjectileMaterial;
 
     UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
     TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
@@ -108,15 +136,10 @@ protected:
     float TeleportHapticIntensity = 0.3f;
 
     UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
-    float CameraFadeDuration = 0.1f;
-
-    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
     FColor CameraFadeColor = FColor::Black;
 
-    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
-    bool bTracePath = true;
-    UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
-    bool bTraceComplex = false;
+    UPROPERTY(VisibleAnywhere)
+    TArray<class USplineMeshComponent*> ProjectileMeshPool;
 
 #pragma region components
 
@@ -150,14 +173,19 @@ protected:
     UPROPERTY(VisibleAnywhere)
     USceneComponent* VROffset;
 
-    // UPROPERTY(VisibleAnywhere)
-    // USceneComponent* RootSceneComponent;
-    
     UPROPERTY(VisibleAnywhere)
     UCapsuleComponent* PawnBody;
 
     UPROPERTY(VisibleAnywhere)
     UStaticMeshComponent* TeleportationIndicator;
 
+    UPROPERTY(VisibleAnywhere)
+    USplineComponent* RightProjectileSpline;
+
+    UPROPERTY(VisibleAnywhere)
+    USplineComponent* LeftProjectileSpline;
+
+    UPROPERTY(VisibleAnywhere)
+    UStaticMeshComponent* TestMesh;
 #pragma endregion
 };

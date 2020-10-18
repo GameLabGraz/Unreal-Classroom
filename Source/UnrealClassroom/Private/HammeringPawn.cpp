@@ -7,6 +7,7 @@
 #include "Components/SphereComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SplineMeshComponent.h"
+#include "Components/SplineComponent.h"
 #include "HammeringStatics.h"
 #include "Kismet/GameplayStatics.h"
 #include "NavigationSystem.h"
@@ -16,12 +17,8 @@ AHammeringPawn::AHammeringPawn()
 {
     PrimaryActorTick.bCanEverTick = true;
 
-    // RootSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
-    // SetRootComponent(RootSceneComponent);
-
     PawnBody = CreateDefaultSubobject<UCapsuleComponent>(TEXT("PawnBody"));
     SetRootComponent(PawnBody);
-    // PawnBody->SetupAttachment(GetRootComponent());
     PawnBody->SetCapsuleRadius(34);
     PawnBody->SetCapsuleHalfHeight(88);
     PawnBody->SetSimulatePhysics(true);
@@ -31,7 +28,6 @@ AHammeringPawn::AHammeringPawn()
 
     TeleportationIndicator = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TeleportationIndicator"));
     TeleportationIndicator->SetupAttachment(VROffset);
-
 
     CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
     CameraComponent->SetupAttachment(VROffset);
@@ -54,6 +50,9 @@ AHammeringPawn::AHammeringPawn()
     LeftGrabSphere->SetCollisionResponseToAllChannels(ECR_Ignore);
     LeftGrabSphere->SetCollisionResponseToChannel(ECC_Grabbable, ECR_Overlap);
 
+    LeftProjectileSpline = CreateDefaultSubobject<USplineComponent>(TEXT("LeftProjectilePath"));
+    LeftProjectileSpline->SetupAttachment(LeftHandMesh);
+
     LeftArcDirection = CreateDefaultSubobject<UArrowComponent>(TEXT("LeftArcDirection"));
     LeftArcDirection->SetupAttachment(LeftHandMesh);
 
@@ -74,6 +73,9 @@ AHammeringPawn::AHammeringPawn()
     RightGrabSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
     RightGrabSphere->SetCollisionResponseToAllChannels(ECR_Ignore);
     RightGrabSphere->SetCollisionResponseToChannel(ECC_Grabbable, ECR_Overlap);
+
+    RightProjectileSpline = CreateDefaultSubobject<USplineComponent>(TEXT("RightProjectilePath"));
+    RightProjectileSpline->SetupAttachment(RightHandMesh);
 
     RightArcDirection = CreateDefaultSubobject<UArrowComponent>(TEXT("RightArcDirection"));
     RightArcDirection->SetupAttachment(RightHandMesh);
@@ -181,7 +183,7 @@ void AHammeringPawn::OnReleaseTeleportRight()
     if (!bIsDestinationFound) { return; }
 
     UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->StartCameraFade(
-        0, 1, TeleportFadeDelay, FColor::Black, false, true);
+        0, 1, TeleportFadeDelay, CameraFadeColor, false, true);
 
     FTimerHandle TimerHandle;
     GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AHammeringPawn::BeginTeleport, TeleportFadeDelay);
@@ -189,6 +191,7 @@ void AHammeringPawn::OnReleaseTeleportRight()
     bIsUpdatingTeleportDestination = false;
     TeleportationIndicator->SetVisibility(false);
     bIsDestinationFound = false;
+    ClearProjectilePool();
 }
 
 void AHammeringPawn::OnPressTeleportLeft()
@@ -204,14 +207,17 @@ void AHammeringPawn::UpdateDestinationMarker()
     auto ActiveHand = bIsRightHandDoTeleportation ? RightHandMesh : LeftHandMesh;
 
     const FVector StartPos = ActiveHand->GetComponentLocation() + ActiveHand->GetForwardVector() * TeleportBeginOffset;
-    const FVector EndPos = StartPos + ActiveHand->GetForwardVector() * MaxTeleportDistance;
-    FHitResult HitResult;
+    const FVector LaunchVelocityVector = ActiveHand->GetForwardVector() * TeleportLaunchVelocity;
 
-    bIsHitTeleportTarget = GetWorld()->LineTraceSingleByChannel(HitResult, StartPos, EndPos, ECC_Visibility);
+    FPredictProjectilePathParams PathParams(ProjectilePathRadius, StartPos, LaunchVelocityVector, ProjectileDuration,
+                                            ECC_Visibility, this);
+    FPredictProjectilePathResult PathResult;
+    bIsHitTeleportTarget = UpdateProjectilePath(PathParams, PathResult, StartPos, LaunchVelocityVector);
 
     FNavLocation PointOnNavMeshLocation;
     const UNavigationSystemV1* NavSystem = FNavigationSystem::GetCurrent<UNavigationSystemV1>(this);
-    const auto bIsProjectedToNavMesh = NavSystem->ProjectPointToNavigation(HitResult.Location, PointOnNavMeshLocation);
+    const auto bIsProjectedToNavMesh = NavSystem->ProjectPointToNavigation(
+        PathResult.HitResult.Location, PointOnNavMeshLocation);
 
     if (bIsHitTeleportTarget && bIsProjectedToNavMesh)
     {
@@ -223,21 +229,122 @@ void AHammeringPawn::UpdateDestinationMarker()
         TeleportationIndicator->SetWorldRotation(ForwardVector.Rotation());
         TeleportationIndicator->SetVisibility(true);
         bIsDestinationFound = true;
+
+        TArray<FVector> PathPoints;
+        for (auto Point : PathResult.PathData)
+        {
+            PathPoints.Add(Point.Location);
+        }
+
+        UpdateProjectileSpline(PathPoints);
+        UpdateProjectileMesh(PathPoints);
     }
     else
     {
         TeleportationIndicator->SetVisibility(false);
+        ClearProjectilePool();
         bIsDestinationFound = false;
     }
 }
 
-void AHammeringPawn::BeginTeleport()
+bool AHammeringPawn::UpdateProjectilePath(FPredictProjectilePathParams& PathParams,
+                                          FPredictProjectilePathResult& PathResult, FVector StartPos,
+                                          FVector LaunchVelocityVector) const
+{
+    if (bIsShowProjectionDebug)
+    {
+        PathParams.DrawDebugType = EDrawDebugTrace::ForOneFrame;
+    }
+    PathParams.bTraceComplex = bIsTraceComplex;
+    const bool bIsHit = UGameplayStatics::PredictProjectilePath(this, PathParams, PathResult);
+
+    return bIsHit;
+}
+
+void AHammeringPawn::UpdateProjectileSpline(TArray<FVector> PathPoints) const
+{
+    RightProjectileSpline->ClearSplinePoints(false);
+
+    for (int32 i = 0; i < PathPoints.Num(); i++)
+    {
+        FVector LocalPosition = RightProjectileSpline->GetComponentTransform().InverseTransformPosition(PathPoints[i]);
+        FSplinePoint SplinePoint(i, LocalPosition);
+        RightProjectileSpline->AddPoint(SplinePoint, false);
+    }
+
+    RightProjectileSpline->UpdateSpline();
+}
+
+
+void AHammeringPawn::UpdateProjectileMesh(TArray<FVector> PathPoints)
+{
+    ClearProjectilePool();
+
+    const auto ActiveHand = bIsRightHandDoTeleportation ? RightHandMesh : LeftHandMesh;
+    const auto CurrentProjectileSpline = bIsRightHandDoTeleportation ? RightProjectileSpline : LeftProjectileSpline;
+    FVector StartPos, EndPos, StartTangent, EndTangent;
+    const auto NumberOfSegments = PathPoints.Num() - 1;
+    for (int32 i=0; i < NumberOfSegments; ++i)
+    {
+        USplineMeshComponent* SplineMesh = NewObject<USplineMeshComponent>();
+        SplineMesh->SetMobility(EComponentMobility::Movable);
+        SplineMesh->AttachToComponent(ActiveHand, FAttachmentTransformRules::KeepRelativeTransform);
+        SplineMesh->SetStaticMesh(TeleportProjectileMesh);
+        SplineMesh->SetMaterial(0, TeleportProjectileMaterial);
+        SplineMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
+        SplineMesh->RegisterComponent();
+        SplineMesh->RegisterComponentWithWorld(GetWorld());
+        ProjectileMeshPool.Add(SplineMesh);
+
+        CurrentProjectileSpline->GetLocalLocationAndTangentAtSplinePoint(i, StartPos, StartTangent);
+        CurrentProjectileSpline->GetLocalLocationAndTangentAtSplinePoint(i+1, EndPos, EndTangent);
+        SplineMesh->SetStartAndEnd(StartPos, StartTangent, EndPos, EndTangent);        
+    }
+
+
+    // TODO: here is another method... check for performance
+
+    // for(int32 i=0; i < PathPoints.Num(); ++i)
+    // {
+    //     if(ProjectileMeshPool.Num() <= i)
+    //     {
+    //         TestMesh = NewObject<UStaticMeshComponent>();
+    //         //ProjectileMesh->AttachToComponent(PawnBody, FAttachmentTransformRules::KeepRelativeTransform);
+    //         TestMesh->SetStaticMesh(TeleportProjectileMesh);
+    //         TestMesh->SetMaterial(0, TeleportProjectileMaterial);
+    //         TestMesh->RegisterComponent();
+    //         TestMesh->RegisterComponentWithWorld(GetWorld());
+    //         TestMesh->SetWorldLocation(PathPoints[i]);
+    //
+    //         UE_LOG(LogTemp, Error, TEXT("Location: %s"), *PathPoints[i].ToString());
+    //         ProjectileMeshPool.Add(TestMesh);
+    //     }
+    //
+    //     UStaticMeshComponent* ProjectileMesh = ProjectileMeshPool[i];
+    //     ProjectileMesh->SetWorldLocation(PathPoints[i]);
+    // }
+
+}
+
+void AHammeringPawn::ClearProjectilePool()
+{
+    if (ProjectileMeshPool.Num() != 0)
+    {
+        for (auto Mesh : ProjectileMeshPool)
+        {
+            Mesh->DestroyComponent();
+        }
+        ProjectileMeshPool.Empty();
+    }
+}
+
+void AHammeringPawn::BeginTeleport() const
 {
     GetRootComponent()->SetWorldLocation(
         TeleportationIndicator->GetComponentLocation() + PawnBody->GetScaledCapsuleHalfHeight() * PawnBody->
         GetUpVector());
 
-    UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->StartCameraFade(1, 0, TeleportFadeDelay, FColor::Black);
+    UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->StartCameraFade(1, 0, TeleportFadeDelay, CameraFadeColor);
 }
 
 void AHammeringPawn::GrabAxisRight(const float AxisValue)
