@@ -175,6 +175,9 @@ void AHammeringPawn::OnPressTeleportRight()
 {
     bIsUpdatingTeleportDestination = true;
     bIsRightHandDoTeleportation = true;
+    bIsTrackingRightAxis = false;
+    RightTempAnimType = EGrabType::Pointing;
+    RightGripStat = 1.0;
 }
 
 
@@ -192,13 +195,17 @@ void AHammeringPawn::OnReleaseTeleportRight()
     TeleportationIndicator->SetVisibility(false);
     bIsDestinationFound = false;
     ClearProjectilePool();
-    bIsRightHandDoTeleportation =false;
+    bIsRightHandDoTeleportation = false;
+    bIsTrackingRightAxis = true;
 }
 
 void AHammeringPawn::OnPressTeleportLeft()
 {
-    if(bIsRightHandDoTeleportation) {return;}
+    if (bIsRightHandDoTeleportation) { return; }
     bIsUpdatingTeleportDestination = true;
+    bIsTrackingLeftAxis = false;
+    LeftTempAnimType = EGrabType::Pointing;
+    LeftGripStat = 1.0;
 }
 
 void AHammeringPawn::OnReleaseTeleportLeft()
@@ -214,6 +221,7 @@ void AHammeringPawn::OnReleaseTeleportLeft()
     bIsUpdatingTeleportDestination = false;
     TeleportationIndicator->SetVisibility(false);
     bIsDestinationFound = false;
+    bIsTrackingLeftAxis = true;
     ClearProjectilePool();
 }
 
@@ -280,13 +288,14 @@ void AHammeringPawn::UpdateProjectileSpline(TArray<FVector> PathPoints) const
 {
     const auto ActiveHand = bIsRightHandDoTeleportation ? RightHandMesh : LeftHandMesh;
     const auto CurrentProjectileSpline = bIsRightHandDoTeleportation ? RightProjectileSpline : LeftProjectileSpline;
-    
+
     CurrentProjectileSpline->ClearSplinePoints(false);
-    
+
 
     for (int32 i = 0; i < PathPoints.Num(); i++)
     {
-        FVector LocalPosition = CurrentProjectileSpline->GetComponentTransform().InverseTransformPosition(PathPoints[i]);
+        FVector LocalPosition = CurrentProjectileSpline->GetComponentTransform().
+                                                         InverseTransformPosition(PathPoints[i]);
         FSplinePoint SplinePoint(i, LocalPosition);
         CurrentProjectileSpline->AddPoint(SplinePoint, false);
     }
@@ -303,7 +312,7 @@ void AHammeringPawn::UpdateProjectileMesh(TArray<FVector> PathPoints)
     const auto CurrentProjectileSpline = bIsRightHandDoTeleportation ? RightProjectileSpline : LeftProjectileSpline;
     FVector StartPos, EndPos, StartTangent, EndTangent;
     const auto NumberOfSegments = PathPoints.Num() - 1;
-    for (int32 i=0; i < NumberOfSegments; ++i)
+    for (int32 i = 0; i < NumberOfSegments; ++i)
     {
         USplineMeshComponent* SplineMesh = NewObject<USplineMeshComponent>();
         SplineMesh->SetMobility(EComponentMobility::Movable);
@@ -316,8 +325,8 @@ void AHammeringPawn::UpdateProjectileMesh(TArray<FVector> PathPoints)
         ProjectileMeshPool.Add(SplineMesh);
 
         CurrentProjectileSpline->GetLocalLocationAndTangentAtSplinePoint(i, StartPos, StartTangent);
-        CurrentProjectileSpline->GetLocalLocationAndTangentAtSplinePoint(i+1, EndPos, EndTangent);
-        SplineMesh->SetStartAndEnd(StartPos, StartTangent, EndPos, EndTangent);        
+        CurrentProjectileSpline->GetLocalLocationAndTangentAtSplinePoint(i + 1, EndPos, EndTangent);
+        SplineMesh->SetStartAndEnd(StartPos, StartTangent, EndPos, EndTangent);
     }
 
 
@@ -342,7 +351,6 @@ void AHammeringPawn::UpdateProjectileMesh(TArray<FVector> PathPoints)
     //     UStaticMeshComponent* ProjectileMesh = ProjectileMeshPool[i];
     //     ProjectileMesh->SetWorldLocation(PathPoints[i]);
     // }
-
 }
 
 void AHammeringPawn::ClearProjectilePool()
@@ -456,10 +464,18 @@ int AHammeringPawn::GetTypeOfGrab(const bool bIsRightHanded) const
 {
     if (bIsRightHanded)
     {
-        if (RightAttachedPickup != nullptr) { return RightAttachedPickup->GetGrabType(); }
+        if (bIsTrackingRightAxis)
+        {
+            if (RightAttachedPickup != nullptr) { return RightAttachedPickup->GetGrabType(); }
+            return EGrabType::Controller;
+        }
+        return RightTempAnimType;
+    }
+    
+    if (bIsTrackingLeftAxis)
+    {
+        if (LeftAttachedPickup != nullptr) { return LeftAttachedPickup->GetGrabType(); }
         return EGrabType::Controller;
     }
-
-    if (LeftAttachedPickup != nullptr) { return LeftAttachedPickup->GetGrabType(); }
-    return EGrabType::Controller;
+    return LeftTempAnimType;
 }

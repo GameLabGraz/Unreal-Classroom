@@ -141,6 +141,12 @@ protected:
     UPROPERTY(VisibleAnywhere)
     TArray<class USplineMeshComponent*> ProjectileMeshPool;
 
+    UPROPERTY()
+    int RightTempAnimType;
+
+    UPROPERTY()
+    int LeftTempAnimType;
+
 #pragma region components
 
     UPROPERTY(VisibleAnywhere)

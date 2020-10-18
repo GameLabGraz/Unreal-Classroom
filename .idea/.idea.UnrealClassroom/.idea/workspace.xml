@@ -38,58 +38,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="693bffca-4724-42ba-bf9a-8924c2fe9346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_Left.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_Right.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_RightFull.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BS_SteamVR_Left.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BS_SteamVR_Right.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/M_Glove_GameLabGraz.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SK_Glove_Left.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SK_Glove_Right.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Left_Bow.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Left_Controller.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Left_Cube.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Left_Open.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Left_Squishy.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Right_Bow.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Right_Controller.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Right_Cube.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Right_Open.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SteamVR_Hand_Right_Squishy.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/T_Glove_Red.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/T_Glove_Red_N.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/vr_glove_left_model_slim_Skeleton.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/vr_glove_right_model_slim_Skeleton.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Left.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SteamVRAssets/Hands/SteamVR_Animations/ANIM_Glove_Left.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SteamVRAssets/Hands/SteamVR_Animations/ANIM_Glove_Left.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SteamVRAssets/Hands/SteamVR_Animations/ANIM_Glove_Right.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SteamVRAssets/Hands/SteamVR_Animations/ANIM_Glove_Right.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HandPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HandPawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_SteamVRPawn_Depricated.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_SteamVRPawn_Depricated.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/BP_SteamVR_Left.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/BP_SteamVR_Right.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/BP_SteamVR_RightFull.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/BS_SteamVR_Left.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/BS_SteamVR_Right.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/M_Glove_GameLabGraz.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SK_Glove_Left.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SK_Glove_Right.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Left_Bow.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Left_Controller.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Left_Cube.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Left_Open.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Left_Squishy.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Right_Bow.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Right_Controller.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Right_Cube.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Right_Open.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/SteamVR_Hand_Right_Squishy.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/T_Glove_Red.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/T_Glove_Red_N.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/vr_glove_left_model_slim_Skeleton.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/SteamVR_Glove/vr_glove_right_model_slim_Skeleton.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,9 +68,9 @@
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawnAnimInstance.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawnAnimInstance.h" />
-        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" />
       </list>
@@ -368,7 +322,7 @@
       <workItem from="1602176934291" duration="8603000" />
       <workItem from="1602330494109" duration="4985000" />
       <workItem from="1602596832797" duration="62304000" />
-      <workItem from="1603018301536" duration="21787000" />
+      <workItem from="1603018301536" duration="23737000" />
     </task>
     <servers />
   </component>

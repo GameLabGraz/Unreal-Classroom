@@ -11,7 +11,8 @@ enum EGrabType
 	Controller UMETA(DisplayName = "Controller"),
 	Box UMETA(DisplayName = "Box"),
 	Bow UMETA(DisplayName = "Bow"),
-	Sphere UMETA(DisplayName = "Sphere"), 
+	Sphere UMETA(DisplayName = "Sphere"),
+	Pointing UMETA(DisplayName = "Pointing"),
 };
 
 // This class does not need to be modified.
