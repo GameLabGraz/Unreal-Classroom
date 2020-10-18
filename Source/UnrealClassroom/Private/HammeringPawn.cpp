@@ -192,14 +192,29 @@ void AHammeringPawn::OnReleaseTeleportRight()
     TeleportationIndicator->SetVisibility(false);
     bIsDestinationFound = false;
     ClearProjectilePool();
+    bIsRightHandDoTeleportation =false;
 }
 
 void AHammeringPawn::OnPressTeleportLeft()
 {
+    if(bIsRightHandDoTeleportation) {return;}
+    bIsUpdatingTeleportDestination = true;
 }
 
 void AHammeringPawn::OnReleaseTeleportLeft()
 {
+    if (!bIsDestinationFound) { return; }
+
+    UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->StartCameraFade(
+        0, 1, TeleportFadeDelay, CameraFadeColor, false, true);
+
+    FTimerHandle TimerHandle;
+    GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AHammeringPawn::BeginTeleport, TeleportFadeDelay);
+
+    bIsUpdatingTeleportDestination = false;
+    TeleportationIndicator->SetVisibility(false);
+    bIsDestinationFound = false;
+    ClearProjectilePool();
 }
 
 void AHammeringPawn::UpdateDestinationMarker()
@@ -263,16 +278,20 @@ bool AHammeringPawn::UpdateProjectilePath(FPredictProjectilePathParams& PathPara
 
 void AHammeringPawn::UpdateProjectileSpline(TArray<FVector> PathPoints) const
 {
-    RightProjectileSpline->ClearSplinePoints(false);
+    const auto ActiveHand = bIsRightHandDoTeleportation ? RightHandMesh : LeftHandMesh;
+    const auto CurrentProjectileSpline = bIsRightHandDoTeleportation ? RightProjectileSpline : LeftProjectileSpline;
+    
+    CurrentProjectileSpline->ClearSplinePoints(false);
+    
 
     for (int32 i = 0; i < PathPoints.Num(); i++)
     {
-        FVector LocalPosition = RightProjectileSpline->GetComponentTransform().InverseTransformPosition(PathPoints[i]);
+        FVector LocalPosition = CurrentProjectileSpline->GetComponentTransform().InverseTransformPosition(PathPoints[i]);
         FSplinePoint SplinePoint(i, LocalPosition);
-        RightProjectileSpline->AddPoint(SplinePoint, false);
+        CurrentProjectileSpline->AddPoint(SplinePoint, false);
     }
 
-    RightProjectileSpline->UpdateSpline();
+    CurrentProjectileSpline->UpdateSpline();
 }
 
 
@@ -430,7 +449,7 @@ void AHammeringPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
     PlayerInputComponent->BindAction("TeleportRight", IE_Pressed, this, &AHammeringPawn::OnPressTeleportRight);
     PlayerInputComponent->BindAction("TeleportRight", IE_Released, this, &AHammeringPawn::OnReleaseTeleportRight);
     PlayerInputComponent->BindAction("TeleportLeft", IE_Pressed, this, &AHammeringPawn::OnPressTeleportLeft);
-    PlayerInputComponent->BindAction("TeleportLeft", IE_Released, this, &AHammeringPawn::OnPressTeleportLeft);
+    PlayerInputComponent->BindAction("TeleportLeft", IE_Released, this, &AHammeringPawn::OnReleaseTeleportLeft);
 }
 
 int AHammeringPawn::GetTypeOfGrab(const bool bIsRightHanded) const
