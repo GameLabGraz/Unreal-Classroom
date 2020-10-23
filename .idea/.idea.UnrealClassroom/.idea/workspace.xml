@@ -38,21 +38,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="693bffca-4724-42ba-bf9a-8924c2fe9346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Left.uasset" afterDir="false" />
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Right_Root_RootAction.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Right_Root_RootAction_001.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/Hand_Pointing_Right_Root_Root_Unreal_Take_Base_Layer_001.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HandPawn_Phys.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/PA_Glove_Right.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_RightFull.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_RightFull.uasset" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/BP_SteamVR_LeftFull.uasset" afterDir="false" />
->>>>>>> DefaultVR
-      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SK_Glove_Right.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SK_Glove_Right.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +70,8 @@
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" />
-        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" />
       </list>
     </option>
   </component>
@@ -331,11 +321,8 @@
       <workItem from="1602176934291" duration="8603000" />
       <workItem from="1602330494109" duration="4985000" />
       <workItem from="1602596832797" duration="62304000" />
-<<<<<<< HEAD
-      <workItem from="1603018301536" duration="24322000" />
-=======
-      <workItem from="1603018301536" duration="23737000" />
->>>>>>> DefaultVR
+      <workItem from="1603018301536" duration="24920000" />
+      <workItem from="1603113274624" duration="1686000" />
     </task>
     <servers />
   </component>
@@ -441,9 +428,9 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="936" y="340" key="run.anything.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1602877400651" />
-    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1603034763669">
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1603113729267">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603034763669" />
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603113729267" />
   </component>
 </project>
