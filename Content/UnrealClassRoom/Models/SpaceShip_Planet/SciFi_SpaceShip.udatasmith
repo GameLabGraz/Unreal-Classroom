@@ -1,0 +1,859 @@
+<DatasmithUnrealScene>
+	<Version>1.0.3</Version>
+	<SDKVersion>4.24E0</SDKVersion>
+	<Host>Blender</Host>
+	<Application Vendor="Blender Foundation" ProductName="Blender" ProductVersion="2.90.1"/>
+	<User ID="RainyDream_GameLabGr" OS="Windows 10"/>
+	<ActorMesh name="Cube_001_ex" layer="Collection">
+		<mesh name="Cube_001_ex__Cube_002_ex"/>
+		<Transform tx="0.000000" ty="0.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_002_ex" layer="Collection">
+		<mesh name="Cube_002_ex__Cube_003_ex"/>
+		<Transform tx="199.000000" ty="0.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_003_ex" layer="Collection">
+		<mesh name="Cube_003_ex__Cube_004_ex"/>
+		<Transform tx="398.000000" ty="0.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_004_ex" layer="Collection">
+		<mesh name="Cube_004_ex__Cube_005_ex"/>
+		<Transform tx="597.000000" ty="0.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_005_ex" layer="Collection">
+		<mesh name="Cube_005_ex__Cube_006_ex"/>
+		<Transform tx="298.500000" ty="-700.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_006_ex" layer="Collection">
+		<mesh name="Cube_006_ex__Cube_009_ex"/>
+		<Transform tx="0.000000" ty="999.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_007_ex" layer="Collection">
+		<mesh name="Cube_007_ex__Cube_010_ex"/>
+		<Transform tx="-68.499992" ty="-950.000000" tz="568.333313" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_008_ex" layer="Collection">
+		<mesh name="Cube_008_ex__Cube_011_ex"/>
+		<Transform tx="-78.500076" ty="-469.499969" tz="57.889427" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_009_ex" layer="Collection">
+		<mesh name="Cube_009_ex__Cube_012_ex"/>
+		<Transform tx="-735.000061" ty="100.000000" tz="319.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_010_ex" layer="Collection">
+		<mesh name="Cube_010_ex__Cube_013_ex"/>
+		<Transform tx="-735.000061" ty="555.784119" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_ex" layer="Collection">
+		<mesh name="Cylinder_ex__Cylinder_ex"/>
+		<Transform tx="-7.265650" ty="-211.734390" tz="8.410436" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_001_ex" layer="Collection">
+		<mesh name="Cylinder_001_ex__Cylinder_001_ex"/>
+		<Transform tx="-7.265650" ty="-211.734390" tz="8.410436" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_002_ex" layer="Collection">
+		<mesh name="Cylinder_002_ex__Cylinder_002_ex"/>
+		<Transform tx="-7.265650" ty="-211.734390" tz="498.589386" qw="0.000000" qx="1.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_011_ex" layer="Collection">
+		<mesh name="Cube_011_ex__Cube_014_ex"/>
+		<Transform tx="-735.000061" ty="100.000000" tz="510.000031" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<Actor name="00_Mid_ex" layer="Collection">
+		<Transform tx="0.000000" ty="0.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</Actor>
+	<ActorMesh name="Cube_012_ex" layer="Collection">
+		<mesh name="Cube_012_ex__Cube_015_ex"/>
+		<Transform tx="712.185974" ty="0.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_013_ex" layer="Collection">
+		<mesh name="Cube_013_ex__Cube_016_ex"/>
+		<Transform tx="782.512451" ty="-192.504807" tz="-46.259274" qw="0.687606" qx="-0.687606" qy="0.164920" qz="0.164920" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_014_ex" layer="Collection">
+		<mesh name="Cube_014_ex__Cube_017_ex"/>
+		<Transform tx="704.905151" ty="-185.346237" tz="-54.828358" qw="0.707107" qx="-0.707107" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_015_ex" layer="Collection">
+		<mesh name="Cube_015_ex__Cube_018_ex"/>
+		<Transform tx="795.999939" ty="0.000000" tz="-111.500023" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_016_ex" layer="Collection">
+		<mesh name="Cube_016_ex__Cube_019_ex"/>
+		<Transform tx="795.999939" ty="-400.000000" tz="-111.500023" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_017_ex" layer="Collection">
+		<mesh name="Cube_017_ex__Cube_020_ex"/>
+		<Transform tx="795.999939" ty="997.999939" tz="-111.500023" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_018_ex" layer="Collection">
+		<mesh name="Cube_018_ex__Cube_021_ex"/>
+		<Transform tx="700.951721" ty="-326.000031" tz="-14.395004" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_019_ex" layer="Collection">
+		<mesh name="Cube_019_ex__Cube_022_ex"/>
+		<Transform tx="596.999939" ty="0.000000" tz="-110.500023" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_020_ex" layer="Collection">
+		<mesh name="Cube_020_ex__Cube_023_ex"/>
+		<Transform tx="596.999939" ty="-200.000000" tz="-110.500023" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_004_ex" layer="Collection">
+		<mesh name="Cylinder_005_ex"/>
+		<Transform tx="718.259766" ty="-317.954315" tz="-19.492371" qw="0.707107" qx="-0.707107" qy="0.000000" qz="0.000000" sx="0.804825" sy="0.804825" sz="0.804825"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_021_ex" layer="Collection">
+		<mesh name="Cube_021_ex__Cube_028_ex"/>
+		<Transform tx="-98.000000" ty="-1228.500122" tz="501.666626" qw="0.707107" qx="0.000000" qy="0.000000" qz="0.707107" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_022_ex" layer="Collection">
+		<mesh name="Cube_022_ex__Cube_030_ex"/>
+		<Transform tx="374.996582" ty="-1054.324097" tz="353.048340" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_023_ex" layer="Collection">
+		<mesh name="Cube_023_ex__Cube_036_ex"/>
+		<Transform tx="-98.000000" ty="-1167.500122" tz="649.111816" qw="0.707107" qx="0.000000" qy="0.000000" qz="0.707107" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_024_ex" layer="Collection">
+		<mesh name="Cube_024_ex__Cube_037_ex"/>
+		<Transform tx="16.303661" ty="-950.000000" tz="657.722595" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_003_ex" layer="Collection">
+		<mesh name="Cylinder_003_ex__Cylinder_007_ex"/>
+		<Transform tx="26.308441" ty="-799.791077" tz="716.351624" qw="0.707107" qx="-0.707107" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_025_ex" layer="Collection">
+		<mesh name="Cube_025_ex__Cube_039_ex"/>
+		<Transform tx="44.451839" ty="-362.489258" tz="657.097717" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_026_ex" layer="Collection">
+		<mesh name="Cube_026_ex__Cube_056_ex"/>
+		<Transform tx="44.451839" ty="-362.489258" tz="657.097717" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_005_ex" layer="Collection">
+		<mesh name="Cylinder_014_ex"/>
+		<Transform tx="-3.986727" ty="-165.589325" tz="569.023987" qw="0.621819" qx="-0.336662" qy="0.621819" qz="0.336662" sx="0.065794" sy="0.065794" sz="0.185705"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_006_ex" layer="Collection">
+		<mesh name="Cylinder_006_ex__Cylinder_017_ex"/>
+		<Transform tx="0.505206" ty="-149.846664" tz="509.634918" qw="0.677813" qx="0.201421" qy="0.677812" qz="-0.201421" sx="0.060484" sy="0.060484" sz="0.419325"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_007_ex" layer="Collection">
+		<mesh name="Cylinder_007_ex__Cylinder_018_ex"/>
+		<Transform tx="-7.265650" ty="-211.734390" tz="811.311340" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_008_ex" layer="Collection">
+		<mesh name="Cylinder_008_ex__Cylinder_019_ex"/>
+		<Transform tx="-7.265650" ty="-211.734390" tz="811.311340" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_009_ex" layer="Collection">
+		<mesh name="Cylinder_009_ex__Cylinder_020_ex"/>
+		<Transform tx="-7.265650" ty="-211.734390" tz="1205.678101" qw="0.000000" qx="1.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_028_ex" layer="Collection">
+		<mesh name="Cube_028_ex__Cube_060_ex"/>
+		<Transform tx="3.869751" ty="-278.749573" tz="788.647156" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.945081" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_029_ex" layer="Collection">
+		<mesh name="Cube_029_ex__Cube_061_ex"/>
+		<Transform tx="3.869766" ty="-298.111450" tz="788.647156" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.945081" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_012_ex" layer="Collection">
+		<mesh name="Cylinder_012_ex__Cylinder_030_ex"/>
+		<Transform tx="564.442078" ty="-1085.713135" tz="548.931335" qw="0.000000" qx="1.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_040_ex" layer="Collection">
+		<mesh name="Cube_040_ex__Cube_099_ex"/>
+		<Transform tx="-498.499969" ty="-700.000000" tz="0.000000" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_036_ex_005" layer="Collection">
+		<mesh name="Cube_084_ex_006"/>
+		<Transform tx="360.596588" ty="-425.912628" tz="51.757504" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.222848" sy="0.176860" sz="0.011681"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_036_ex_001" layer="Collection">
+		<mesh name="Cube_084_ex_029"/>
+		<Transform tx="360.596588" ty="-754.842773" tz="51.757504" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.222848" sy="0.176860" sz="0.011681"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_036_ex_002" layer="Collection">
+		<mesh name="Cube_084_ex_030"/>
+		<Transform tx="360.596588" ty="698.076660" tz="51.757504" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.222848" sy="0.176860" sz="0.011681"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_036_ex_003" layer="Collection">
+		<mesh name="Cube_084_ex_031"/>
+		<Transform tx="360.596588" ty="369.146545" tz="51.757504" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.222848" sy="0.176860" sz="0.011681"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_036_ex_004" layer="Collection">
+		<mesh name="Cube_084_ex_033"/>
+		<Transform tx="811.726562" ty="-434.340179" tz="-58.716488" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="0.222848" sy="0.176860" sz="0.011681"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_036_ex_006" layer="Collection">
+		<mesh name="Cube_084_ex_034"/>
+		<Transform tx="811.726562" ty="-951.231384" tz="-58.716488" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="0.222848" sy="0.176860" sz="0.011681"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_036_ex_007" layer="Collection">
+		<mesh name="Cube_084_ex_035"/>
+		<Transform tx="811.726562" ty="967.990662" tz="-58.716488" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="0.222848" sy="0.176860" sz="0.011681"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_036_ex_008" layer="Collection">
+		<mesh name="Cube_084_ex_036"/>
+		<Transform tx="811.726562" ty="451.099487" tz="-58.716488" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="0.222848" sy="0.176860" sz="0.011681"/>
+	</ActorMesh>
+	<ActorMesh name="Cube" layer="Collection">
+		<mesh name="Cube__Cube_002"/>
+		<Transform tx="-78.500076" ty="-469.499969" tz="210.813110" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.007630" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_001" layer="Collection">
+		<mesh name="Cube_001__Cube_003"/>
+		<Transform tx="-18.182999" ty="-469.499969" tz="93.572655" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="NurbsPath" layer="Collection">
+		<mesh name="NurbsPath_NurbsPath"/>
+		<Transform tx="-55.854301" ty="-439.672760" tz="314.136444" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="NurbsPath_001" layer="Collection">
+		<mesh name="NurbsPath_002_NurbsPath_001"/>
+		<Transform tx="-55.854301" ty="-439.672760" tz="495.723969" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="NurbsPath_002" layer="Collection">
+		<mesh name="NurbsPath_003_NurbsPath_002"/>
+		<Transform tx="-55.854301" ty="-439.672760" tz="10.464571" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Torus" layer="Collection">
+		<mesh name="Torus"/>
+		<Transform tx="374.996582" ty="-1018.853638" tz="82.023415" qw="0.707107" qx="-0.707107" qy="0.000000" qz="0.000000" sx="0.104182" sy="0.104182" sz="0.104182"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_002" layer="Collection">
+		<mesh name="Cube_007"/>
+		<Transform tx="374.996582" ty="-1018.277283" tz="82.023407" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Torus_002" layer="Collection">
+		<mesh name="Torus_002"/>
+		<Transform tx="598.622986" ty="-548.851379" tz="12.736137" qw="0.678105" qx="-0.232211" qy="-0.654500" qz="-0.240586" sx="0.057188" sy="0.057188" sz="0.101032"/>
+	</ActorMesh>
+	<ActorMesh name="Torus_001" layer="Collection">
+		<mesh name="Torus_003"/>
+		<Transform tx="596.625427" ty="-547.229858" tz="12.827317" qw="0.678105" qx="-0.232211" qy="-0.654500" qz="-0.240586" sx="0.044148" sy="0.044148" sz="0.077994"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder" layer="Collection">
+		<mesh name="Cylinder_005"/>
+		<Transform tx="-18.182999" ty="-339.898895" tz="109.011604" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.114470" sy="0.114470" sz="0.114470"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_003" layer="Collection">
+		<mesh name="Cube_008"/>
+		<Transform tx="-18.182999" ty="-405.932861" tz="115.534683" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.180794" sy="0.180794" sz="0.180794"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_004" layer="Collection">
+		<mesh name="Cube_009"/>
+		<Transform tx="-18.182999" ty="-531.642578" tz="109.811378" qw="0.999789" qx="0.000000" qy="0.000000" qz="0.020522" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_005" layer="Collection">
+		<mesh name="Cube_010"/>
+		<Transform tx="-24.744585" ty="355.745087" tz="109.811378" qw="0.999883" qx="0.000000" qy="0.000000" qz="-0.015280" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_006" layer="Collection">
+		<mesh name="Cube_011"/>
+		<Transform tx="-24.744585" ty="572.622375" tz="109.811378" qw="0.999671" qx="0.000000" qy="0.000000" qz="0.025661" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Torus_004" layer="Collection">
+		<mesh name="Torus_004"/>
+		<Transform tx="966.031372" ty="0.000000" tz="1204.972046" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="3.416273" sy="3.416273" sz="3.416273"/>
+	</ActorMesh>
+	<ActorMesh name="Circle" layer="Collection">
+		<mesh name="Circle"/>
+		<Transform tx="972.715393" ty="-15.762573" tz="1162.972412" qw="1.000000" qx="-0.000000" qy="0.000000" qz="0.000000" sx="0.014414" sy="0.014414" sz="0.014414"/>
+	</ActorMesh>
+	<ActorMesh name="Icosphere" layer="Collection">
+		<mesh name="Icosphere"/>
+		<Transform tx="966.031372" ty="0.000000" tz="1204.972046" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="3.483862" sy="3.483862" sz="3.483862"/>
+	</ActorMesh>
+	<ActorMesh name="Icosphere_001" layer="Collection">
+		<mesh name="Icosphere_001__Icosphere_001"/>
+		<Transform tx="966.031372" ty="0.000000" tz="1204.972046" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="3.483862" sy="3.483862" sz="3.483862"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_007" layer="Collection">
+		<mesh name="Cube_012"/>
+		<Transform tx="929.714417" ty="-115.003761" tz="1233.121338" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="9.396765" sy="9.396765" sz="0.300000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_008" layer="Collection">
+		<mesh name="Cube_008__Cube_013"/>
+		<Transform tx="966.031372" ty="-510.836884" tz="1204.972046" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_009" layer="Collection">
+		<mesh name="Cube_014"/>
+		<Transform tx="1905.049927" ty="0.000000" tz="1204.972046" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="0.212829" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<StaticMesh label="Cube_001_ex__Cube_002_ex" name="Cube_001_ex__Cube_002_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_001_ex__Cube_002_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="fc29e21d279decebf462ccb9515637c6"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_002_ex__Cube_003_ex" name="Cube_002_ex__Cube_003_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_002_ex__Cube_003_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="0435cc962cb9f149429bf8b052862349"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_003_ex__Cube_004_ex" name="Cube_003_ex__Cube_004_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_003_ex__Cube_004_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="0016b282ac14dd88206b252449b3d511"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_004_ex__Cube_005_ex" name="Cube_004_ex__Cube_005_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_004_ex__Cube_005_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d79eb214208e8e85ab3c59cd53e538d0"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_005_ex__Cube_006_ex" name="Cube_005_ex__Cube_006_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_005_ex__Cube_006_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="95f25db7341f9c2d948777b45e297a44"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_006_ex__Cube_009_ex" name="Cube_006_ex__Cube_009_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_006_ex__Cube_009_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ec09df36cbc6afa373d8f01b27332bb6"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_007_ex__Cube_010_ex" name="Cube_007_ex__Cube_010_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_007_ex__Cube_010_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="86e2e0f154aeaab446bc4d27ab492f9c"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_008_ex__Cube_011_ex" name="Cube_008_ex__Cube_011_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_008_ex__Cube_011_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="898b8a69d3f6930a1c73228ae29345a6"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_009_ex__Cube_012_ex" name="Cube_009_ex__Cube_012_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_009_ex__Cube_012_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="59ae151b4df9c7b690d7f6d50fe84be3"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_010_ex__Cube_013_ex" name="Cube_010_ex__Cube_013_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_010_ex__Cube_013_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="a99a2eab9def4629ef3aa988511c9ce9"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_ex__Cylinder_ex" name="Cylinder_ex__Cylinder_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_ex__Cylinder_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="1926d70d7bfcb7dcae964579e125af24"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_001_ex__Cylinder_001_ex" name="Cylinder_001_ex__Cylinder_001_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_001_ex__Cylinder_001_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="0c72d6e9ffea09d0c30fb61d652e42b8"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_002_ex__Cylinder_002_ex" name="Cylinder_002_ex__Cylinder_002_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_002_ex__Cylinder_002_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="43274c127480aec189fe7738de0d6694"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_011_ex__Cube_014_ex" name="Cube_011_ex__Cube_014_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_011_ex__Cube_014_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="04e27db026eaddb978961d00bea67ad4"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_012_ex__Cube_015_ex" name="Cube_012_ex__Cube_015_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_012_ex__Cube_015_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="985006fdc2b4c36204a31f6b4444c6dc"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_013_ex__Cube_016_ex" name="Cube_013_ex__Cube_016_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_013_ex__Cube_016_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6f126bf374dfa983bb50e80c353b576a"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_014_ex__Cube_017_ex" name="Cube_014_ex__Cube_017_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_014_ex__Cube_017_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="84a453ae8854eedb1e9af3a9d7eea08b"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_015_ex__Cube_018_ex" name="Cube_015_ex__Cube_018_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_015_ex__Cube_018_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="3b86951bce281fd4b974b1050f5b6507"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_016_ex__Cube_019_ex" name="Cube_016_ex__Cube_019_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_016_ex__Cube_019_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="57aa76db91d96d2e352dde3f6bdc6acd"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_017_ex__Cube_020_ex" name="Cube_017_ex__Cube_020_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_017_ex__Cube_020_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="5f5e7be128f7fef7ee2c44d8c6c5364e"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_018_ex__Cube_021_ex" name="Cube_018_ex__Cube_021_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_018_ex__Cube_021_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c345a52e3846648bf03958bf28a967c0"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_019_ex__Cube_022_ex" name="Cube_019_ex__Cube_022_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_019_ex__Cube_022_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="cbcb2cea88f25239da685cce3416ab1a"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_020_ex__Cube_023_ex" name="Cube_020_ex__Cube_023_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_020_ex__Cube_023_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="917a2e7cbbed8fbb1bd9c9cdee7dcda1"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_005_ex" name="Cylinder_005_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_005_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="bba75c9185683f143db831f5fde7a17b"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_021_ex__Cube_028_ex" name="Cube_021_ex__Cube_028_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_021_ex__Cube_028_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="26c0fc8e6525b1f0fa4b94c35337b406"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_022_ex__Cube_030_ex" name="Cube_022_ex__Cube_030_ex">
+		<Material id="0" name="Main"/>
+		<Material id="1" name="Round"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_022_ex__Cube_030_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="38e00fc3ea2d917994d9623e9778cf05"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_023_ex__Cube_036_ex" name="Cube_023_ex__Cube_036_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_023_ex__Cube_036_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="12af9feedf554b775b5a2d12726cd389"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_024_ex__Cube_037_ex" name="Cube_024_ex__Cube_037_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_024_ex__Cube_037_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c2929e239bea56d95ea2d7c1b5edbd66"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_003_ex__Cylinder_007_ex" name="Cylinder_003_ex__Cylinder_007_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_003_ex__Cylinder_007_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="60c9b4ca9a2448e17f929ae60567a33e"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_025_ex__Cube_039_ex" name="Cube_025_ex__Cube_039_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_025_ex__Cube_039_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="4aad7579716eb5640c58c838bc9cc0a4"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_026_ex__Cube_056_ex" name="Cube_026_ex__Cube_056_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_026_ex__Cube_056_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="5db377fc9bc7cbc22e1e04e75b158a56"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_014_ex" name="Cylinder_014_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_014_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="1ba5431b940f763933369dfd45c82e50"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_006_ex__Cylinder_017_ex" name="Cylinder_006_ex__Cylinder_017_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_006_ex__Cylinder_017_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="e484e8cc46aa2c827a71053e666c2894"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_007_ex__Cylinder_018_ex" name="Cylinder_007_ex__Cylinder_018_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_007_ex__Cylinder_018_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="77943b37b7fe5bc65835a7020923ab0a"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_008_ex__Cylinder_019_ex" name="Cylinder_008_ex__Cylinder_019_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_008_ex__Cylinder_019_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6878ef9b7ef9636d1ef3ef901f735587"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_009_ex__Cylinder_020_ex" name="Cylinder_009_ex__Cylinder_020_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_009_ex__Cylinder_020_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="2e4b45a008aaaadbd18575ea8c0a3c4a"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_028_ex__Cube_060_ex" name="Cube_028_ex__Cube_060_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_028_ex__Cube_060_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="9b64c7fe3523d1d019824b3a221744ab"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_029_ex__Cube_061_ex" name="Cube_029_ex__Cube_061_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_029_ex__Cube_061_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="f8598da38f6d47fe0dc9c78288aa2aa3"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_012_ex__Cylinder_030_ex" name="Cylinder_012_ex__Cylinder_030_ex">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_012_ex__Cylinder_030_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="47997c8f1732df42ff724a1f2988e234"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_040_ex__Cube_099_ex" name="Cube_040_ex__Cube_099_ex">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_040_ex__Cube_099_ex.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ebf00c094b44e83a42bcef56fc6bac7c"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_084_ex_006" name="Cube_084_ex_006">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Orange_Metal"/>
+		<Material id="2" name="Lamps"/>
+		<Material id="3" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_084_ex_006.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c0936108f743200df4f7116230207dad"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_084_ex_029" name="Cube_084_ex_029">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Orange_Metal"/>
+		<Material id="2" name="Lamps"/>
+		<Material id="3" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_084_ex_029.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="bb5d3f6d30eb9978157e19e05201553c"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_084_ex_030" name="Cube_084_ex_030">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Orange_Metal"/>
+		<Material id="2" name="Lamps"/>
+		<Material id="3" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_084_ex_030.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="54a3dc332539178f5494401f8c1ccec5"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_084_ex_031" name="Cube_084_ex_031">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Orange_Metal"/>
+		<Material id="2" name="Lamps"/>
+		<Material id="3" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_084_ex_031.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6cdfe1b1d6ad83b4bb9a2c1533c58c78"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_084_ex_033" name="Cube_084_ex_033">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Orange_Metal"/>
+		<Material id="2" name="Lamps"/>
+		<Material id="3" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_084_ex_033.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="055141d2710cf4fff81890c3526b79c9"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_084_ex_034" name="Cube_084_ex_034">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Orange_Metal"/>
+		<Material id="2" name="Lamps"/>
+		<Material id="3" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_084_ex_034.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="8c6959744375492ef4491819ba58b6b9"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_084_ex_035" name="Cube_084_ex_035">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Orange_Metal"/>
+		<Material id="2" name="Lamps"/>
+		<Material id="3" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_084_ex_035.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c5c255b4e073bc14246e20b46fe1110f"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_084_ex_036" name="Cube_084_ex_036">
+		<Material id="0" name="Metal"/>
+		<Material id="1" name="Orange_Metal"/>
+		<Material id="2" name="Lamps"/>
+		<Material id="3" name="Liquid"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_084_ex_036.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="b2a72038797b64345ef42b0b748db257"/>
+	</StaticMesh>
+	<StaticMesh label="Cube__Cube_002" name="Cube__Cube_002">
+		<Material id="0" name="Glass"/>
+		<Material id="1" name="Metal"/>
+		<Material id="2" name="Lamps"/>
+		<file path="SciFi_SpaceShip_Assets/Cube__Cube_002.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="98d39e1d5ba8f7b9e1cae766f691e15e"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_001__Cube_003" name="Cube_001__Cube_003">
+		<Material id="0" name="Metal"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_001__Cube_003.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6c03db12f0fef5e10e71fb99256efd6a"/>
+	</StaticMesh>
+	<StaticMesh label="NurbsPath_NurbsPath" name="NurbsPath_NurbsPath">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/NurbsPath_NurbsPath.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="3f64e1e3ce9f221f683139089155fc1c"/>
+	</StaticMesh>
+	<StaticMesh label="NurbsPath_002_NurbsPath_001" name="NurbsPath_002_NurbsPath_001">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/NurbsPath_002_NurbsPath_001.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="2bb95868c666a52596990a11cb343e66"/>
+	</StaticMesh>
+	<StaticMesh label="NurbsPath_003_NurbsPath_002" name="NurbsPath_003_NurbsPath_002">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/NurbsPath_003_NurbsPath_002.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="8e75a5b06cf661f4981e68defc9a70a0"/>
+	</StaticMesh>
+	<StaticMesh label="Torus" name="Torus">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Torus.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="fbd979fb8351dff003141e1fa8f16b02"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_007" name="Cube_007">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_007.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="f9634f527b7c6dfe3fdb5ebb25f7b92d"/>
+	</StaticMesh>
+	<StaticMesh label="Torus_002" name="Torus_002">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Torus_002.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="5ae2812fa76924e00cc259a3eb0acc89"/>
+	</StaticMesh>
+	<StaticMesh label="Torus_003" name="Torus_003">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Torus_003.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="8b7c2d6e87c36a3af1f0401a3ba09ef9"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_005" name="Cylinder_005">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cylinder_005.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="3c8a31a5489c350c33c98cddead8498a"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_008" name="Cube_008">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_008.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="de336aa0a30628f55f146d2d4100bce8"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_009" name="Cube_009">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_009.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6a26a24251b49de823be5d706c299e62"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_010" name="Cube_010">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_010.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ef415f132418307cc483b63b39b8aa18"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_011" name="Cube_011">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_011.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d9f7a8444f7c71a24ba3594c6ea75715"/>
+	</StaticMesh>
+	<StaticMesh label="Torus_004" name="Torus_004">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Torus_004.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="605e51217d45d9d48ec776a718e7e4e2"/>
+	</StaticMesh>
+	<StaticMesh label="Circle" name="Circle">
+		<Material id="0" name="Metal"/>
+		<file path="SciFi_SpaceShip_Assets/Circle.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6c986b352c139afe25405d0b097343ad"/>
+	</StaticMesh>
+	<StaticMesh label="Icosphere" name="Icosphere">
+		<Material id="0" name="Glass"/>
+		<file path="SciFi_SpaceShip_Assets/Icosphere.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="2b0739cd6e2fc93ae991524a868acc1e"/>
+	</StaticMesh>
+	<StaticMesh label="Icosphere_001__Icosphere_001" name="Icosphere_001__Icosphere_001">
+		<Material id="0" name="Metal"/>
+		<file path="SciFi_SpaceShip_Assets/Icosphere_001__Icosphere_001.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="66beda462081c400a9af2f15c1f6b488"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_012" name="Cube_012">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_012.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="86b1a58ffabb7db9b0f9fe3852ddc9aa"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_008__Cube_013" name="Cube_008__Cube_013">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_008__Cube_013.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="14d0bbf702591184173b8f04592702a2"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_014" name="Cube_014">
+		<Material id="0" name="Top"/>
+		<Material id="1" name="Mid"/>
+		<Material id="2" name="Bot"/>
+		<file path="SciFi_SpaceShip_Assets/Cube_014.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="95153485b999a64152956075a6f6f917"/>
+	</StaticMesh>
+	<UEPbrMaterial name="DefaultMaterial">
+		<Expressions>
+			<Color constant="(R=0.906332,G=0.906332,B=0.906332,A=1.000000)"/>
+			<Scalar constant="0.400000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Roughness expression="1" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Main">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.800000,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Round">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.800000,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Metal">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.800000,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Liquid">
+		<Expressions>
+			<Color constant="(R=0.022423,G=0.512224,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.161836"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Orange_Metal">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.416770,B=0.083014,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Lamps">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.368544,B=0.000000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Glass">
+		<Expressions>
+			<Color constant="(R=0.000000,G=0.009406,B=0.054969,A=1.000000)"/>
+			<Scalar constant="0.125604"/>
+			<Scalar constant="0.036232"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Top">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.800000,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Mid">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.800000,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Bot">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.800000,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<Export Duration="0.6410000000032596"/>
+</DatasmithUnrealScene>

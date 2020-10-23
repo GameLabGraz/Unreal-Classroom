@@ -152,7 +152,7 @@ protected:
     UPROPERTY(VisibleAnywhere)
     UCameraComponent* CameraComponent;
 
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
     USkeletalMeshComponent* RightHandMesh;
 
     UPROPERTY(VisibleAnywhere)
@@ -164,7 +164,7 @@ protected:
     UPROPERTY(VisibleAnywhere)
     UMotionControllerComponent* RightMotionControllerComponent;
 
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
     USkeletalMeshComponent* LeftHandMesh;
 
     UPROPERTY(VisibleAnywhere)
@@ -193,5 +193,6 @@ protected:
 
     UPROPERTY(VisibleAnywhere)
     UStaticMeshComponent* TestMesh;
+
 #pragma endregion
 };
