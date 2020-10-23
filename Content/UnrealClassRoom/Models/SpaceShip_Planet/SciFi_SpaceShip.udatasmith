@@ -639,7 +639,7 @@
 		<Material id="0" name="DefaultMaterial"/>
 		<file path="SciFi_SpaceShip_Assets/Cube_007.udsmesh"/>
 		<LightmapUV value="-1"/>
-		<Hash value="f9634f527b7c6dfe3fdb5ebb25f7b92d"/>
+		<Hash value="ae4eb3441c50b9aa37550d42de1a14ca"/>
 	</StaticMesh>
 	<StaticMesh label="Torus_002" name="Torus_002">
 		<Material id="0" name="DefaultMaterial"/>
@@ -855,5 +855,5 @@
 		<Roughness expression="2" OutputIndex="0"/>
 		<Specular expression="3" OutputIndex="0"/>
 	</UEPbrMaterial>
-	<Export Duration="0.6410000000032596"/>
+	<Export Duration="0.7030000000377186"/>
 </DatasmithUnrealScene>

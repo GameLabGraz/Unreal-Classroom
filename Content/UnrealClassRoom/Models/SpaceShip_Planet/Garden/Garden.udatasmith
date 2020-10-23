@@ -1,0 +1,230 @@
+<DatasmithUnrealScene>
+	<Version>1.0.3</Version>
+	<SDKVersion>4.24E0</SDKVersion>
+	<Host>Blender</Host>
+	<Application Vendor="Blender Foundation" ProductName="Blender" ProductVersion="2.90.1"/>
+	<User ID="RainyDream_GameLabGr" OS="Windows 10"/>
+	<ActorMesh name="Cylinder_001" layer="Collection">
+		<mesh name="Cylinder_001__Cylinder_008"/>
+		<Transform tx="-2515.779541" ty="0.499868" tz="34.545708" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_002" layer="Collection">
+		<mesh name="Cylinder_002__Cylinder_009"/>
+		<Transform tx="-2515.779541" ty="0.499868" tz="34.545708" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Sphere" layer="Collection">
+		<mesh name="Sphere__Sphere"/>
+		<Transform tx="-2515.779297" ty="284.174835" tz="144.867142" qw="0.882390" qx="-0.470520" qy="0.000000" qz="0.000000" sx="0.077781" sy="0.077781" sz="0.075072"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_003" layer="Collection">
+		<mesh name="Cylinder_003__Cylinder_011"/>
+		<Transform tx="-2515.779541" ty="-3.062763" tz="34.545708" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_012" layer="Collection">
+		<mesh name="Cube_012__Cube_024"/>
+		<Transform tx="-2179.704590" ty="0.499845" tz="13.796483" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Sphere_001" layer="Collection">
+		<mesh name="Sphere_001__Sphere_001"/>
+		<Transform tx="-2232.104492" ty="0.499654" tz="144.867126" qw="0.623944" qx="-0.332707" qy="0.332707" qz="-0.623944" sx="0.077781" sy="0.077781" sz="0.075072"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_004" layer="Collection">
+		<mesh name="Cylinder_004__Cylinder_014"/>
+		<Transform tx="-2519.342041" ty="0.499868" tz="34.545708" qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_005" layer="Collection">
+		<mesh name="Cylinder_015"/>
+		<Transform tx="-2515.779541" ty="0.499868" tz="27.014658" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Sphere_002" layer="Collection">
+		<mesh name="Sphere_002"/>
+		<Transform tx="-2515.779541" ty="0.499868" tz="727.385193" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="2.637257" sy="2.637257" sz="2.637257"/>
+	</ActorMesh>
+	<ActorMesh name="Cylinder_006" layer="Collection">
+		<mesh name="Cylinder_016"/>
+		<Transform tx="-2515.779541" ty="0.499868" tz="-1.748821" qw="0.000000" qx="-0.000000" qy="-0.000000" qz="1.000000" sx="-4.459534" sy="-4.459534" sz="-0.078704"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_040_ex_001" layer="Garden">
+		<mesh name="Cube_099_ex_002"/>
+		<Transform tx="-2038.123169" ty="0.499868" tz="-214.277176" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_040_ex_002" layer="Garden">
+		<mesh name="Cube_040_ex_002__Cube_099_ex_003"/>
+		<Transform tx="-2038.123169" ty="0.499868" tz="-214.277176" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_011" layer="Garden">
+		<mesh name="Cube_011__Cube_017"/>
+		<Transform tx="-2695.998535" ty="-1258.000244" tz="3.999996" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_013" layer="Garden">
+		<mesh name="Cube_013__Cube_020"/>
+		<Transform tx="-2695.998535" ty="-1258.000244" tz="3.999996" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<ActorMesh name="Cube_040_ex_004" layer="Garden">
+		<mesh name="Cube_040_ex_004__Cube_099_ex_005"/>
+		<Transform tx="-2038.123169" ty="0.499960" tz="-55.249989" qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" sx="1.000000" sy="1.000000" sz="1.000000"/>
+	</ActorMesh>
+	<StaticMesh label="Cylinder_001__Cylinder_008" name="Cylinder_001__Cylinder_008">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cylinder_001__Cylinder_008.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="8828b923317084e9bd739048d42ffdf3"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_002__Cylinder_009" name="Cylinder_002__Cylinder_009">
+		<Material id="0" name="OrangeMetal"/>
+		<file path="Garden_Assets/Cylinder_002__Cylinder_009.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="06684753608e97f98242ac49fe950d52"/>
+	</StaticMesh>
+	<StaticMesh label="Sphere__Sphere" name="Sphere__Sphere">
+		<Material id="0" name="Glass"/>
+		<Material id="1" name="Metal"/>
+		<file path="Garden_Assets/Sphere__Sphere.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d7bd84c5e3709d39f34171d6b3a0937e"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_003__Cylinder_011" name="Cylinder_003__Cylinder_011">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cylinder_003__Cylinder_011.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c4b35301d644a40ec118779773aaa1d5"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_012__Cube_024" name="Cube_012__Cube_024">
+		<Material id="0" name="Round"/>
+		<Material id="1" name="Liquid"/>
+		<Material id="2" name="Metal"/>
+		<file path="Garden_Assets/Cube_012__Cube_024.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="da3e3167f3f43efd307aa0a693229d76"/>
+	</StaticMesh>
+	<StaticMesh label="Sphere_001__Sphere_001" name="Sphere_001__Sphere_001">
+		<Material id="0" name="Glass"/>
+		<Material id="1" name="Metal"/>
+		<file path="Garden_Assets/Sphere_001__Sphere_001.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6c43acfb39e8f7c30ea69decff473ca5"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_004__Cylinder_014" name="Cylinder_004__Cylinder_014">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cylinder_004__Cylinder_014.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="1bc47aaecded3767f62e2dec0a397b37"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_015" name="Cylinder_015">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cylinder_015.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="b25f4f90be68d8bbcb44663ea0ec9c34"/>
+	</StaticMesh>
+	<StaticMesh label="Sphere_002" name="Sphere_002">
+		<Material id="0" name="Glass"/>
+		<file path="Garden_Assets/Sphere_002.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c8e717930878b320a0cc6bbc41b00578"/>
+	</StaticMesh>
+	<StaticMesh label="Cylinder_016" name="Cylinder_016">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cylinder_016.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="870f0bf73f4b012028afa81719a6001d"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_099_ex_002" name="Cube_099_ex_002">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cube_099_ex_002.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="806962f5e35ace71ccdf8b8609871b2c"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_040_ex_002__Cube_099_ex_003" name="Cube_040_ex_002__Cube_099_ex_003">
+		<Material id="0" name="Glass"/>
+		<file path="Garden_Assets/Cube_040_ex_002__Cube_099_ex_003.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d5b32594522116e54bc5885edde5a8a9"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_011__Cube_017" name="Cube_011__Cube_017">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cube_011__Cube_017.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="4080dbde290eda9c1ead5f41b4b6ef0c"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_013__Cube_020" name="Cube_013__Cube_020">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cube_013__Cube_020.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="860e9edd81e4b2735235cd8d43e8e485"/>
+	</StaticMesh>
+	<StaticMesh label="Cube_040_ex_004__Cube_099_ex_005" name="Cube_040_ex_004__Cube_099_ex_005">
+		<Material id="0" name="DefaultMaterial"/>
+		<file path="Garden_Assets/Cube_040_ex_004__Cube_099_ex_005.udsmesh"/>
+		<LightmapUV value="-1"/>
+		<Hash value="11c8fc4ea27782adaafdcf9ae78319f6"/>
+	</StaticMesh>
+	<UEPbrMaterial name="DefaultMaterial">
+		<Expressions>
+			<Color constant="(R=0.906332,G=0.906332,B=0.906332,A=1.000000)"/>
+			<Scalar constant="0.400000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Roughness expression="1" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="OrangeMetal">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.380816,B=0.000000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Glass">
+		<Expressions>
+			<Color constant="(R=0.000000,G=0.009406,B=0.054969,A=1.000000)"/>
+			<Scalar constant="0.125604"/>
+			<Scalar constant="0.036232"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Metal">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.800000,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Round">
+		<Expressions>
+			<Color constant="(R=0.800000,G=0.800000,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.500000"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Liquid">
+		<Expressions>
+			<Color constant="(R=0.022423,G=0.512224,B=0.800000,A=1.000000)"/>
+			<Scalar constant="0.000000"/>
+			<Scalar constant="0.161836"/>
+			<Scalar constant="0.500000"/>
+		</Expressions>
+		<BaseColor expression="0" OutputIndex="0"/>
+		<Metallic expression="1" OutputIndex="0"/>
+		<Roughness expression="2" OutputIndex="0"/>
+		<Specular expression="3" OutputIndex="0"/>
+	</UEPbrMaterial>
+	<Export Duration="0.13999999995576218"/>
+</DatasmithUnrealScene>
