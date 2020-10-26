@@ -22,38 +22,37 @@ APhysicalConstraintPickupActor::APhysicalConstraintPickupActor()
 
 void APhysicalConstraintPickupActor::GrabPressed(USceneComponent* AttachTo)
 {
-    if(bSnapToHand)
+    if (bSnapToHand)
     {
         FVector AttachLocation = AttachTo->GetComponentLocation();
         FRotator AttachRotation = AttachTo->GetComponentRotation();
-        
-        if(bUseCustomLocation)
+
+        if (bUseCustomLocation)
         {
             const FVector DeltaLocation = GetCustomAttachLocation() - StaticMeshComponent->GetComponentLocation();
-        
-            AttachLocation-= DeltaLocation;
+
+            AttachLocation -= DeltaLocation;
         }
-        if(bUseCustomRotation)
+        if (bUseCustomRotation)
         {
             const FRotator DeltaRotation = GetCustomAttachRotation() - StaticMeshComponent->GetComponentRotation();
-            AttachRotation-= DeltaRotation;
+            AttachRotation -= DeltaRotation;
         }
         SetActorLocationAndRotation(AttachLocation, AttachRotation);
     }
-    
-    
+
+
     if (!StaticMeshComponent->IsSimulatingPhysics())
     {
         StaticMeshComponent->SetSimulatePhysics(true);
     }
-    
+
     PhysicsConstraintComponent->ConstraintActor1 = this;
     PhysicsConstraintComponent->ConstraintActor2 = AttachTo->GetOwner();
-    
+
     // Note: Static Mesh Component should be the root component otherwise during simulation it will detach from root
     PhysicsConstraintComponent->SetConstrainedComponents(StaticMeshComponent, NAME_None,
                                                          Cast<UPrimitiveComponent>(AttachTo), NAME_None);
-
 }
 
 void APhysicalConstraintPickupActor::GrabReleased()

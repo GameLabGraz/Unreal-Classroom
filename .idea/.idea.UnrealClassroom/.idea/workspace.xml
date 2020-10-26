@@ -38,11 +38,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="693bffca-4724-42ba-bf9a-8924c2fe9346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/BP_HandPawn_Phys.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/PA_Glove_Right.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/VRPawn/BP_TestVRPawn.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/VRPawn/BP_VRLeftHandActor.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/VRPawn/BP_VRPawn.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/VRPawn/BP_VRRightHandActor.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/NewHandActor.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/MegaScans/Blends/ForestRoot_grass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/VRPawn.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/VRPhysicalHandActor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/VRPawn.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/VRPhysicalHandActor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealClassroom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SK_Glove_Right.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Pawn/SteamVR_Glove/SK_Glove_Right.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/DefaultVR/VirtualRealityBP/Blueprints/MotionControllerPawn.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Core/BP_UnrealClassroomGameModeBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Core/BP_UnrealClassroomGameModeBase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/SpaceShip.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/SpaceShip.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/MegaScans/Blends/ConcreteGrass_Garden.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/MegaScans/Blends/ConcreteGrass_Garden.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/MegaScans/Blends/ForestGrass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/MegaScans/Blends/ForestGrass.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/MegaScans/Blends/Pavement.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/MegaScans/Blends/Pavement.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom.Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawnAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawnAnimInstance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PhysicalConstraintPickupActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PhysicalConstraintPickupActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/UnrealClassroom.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/UnrealClassroom.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/UnrealClassroomGameModeBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/UnrealClassroomGameModeBase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawnAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawnAnimInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringStatics.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringStatics.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/UnrealClassroom.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/UnrealClassroom.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/UnrealClassroomGameModeBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/UnrealClassroomGameModeBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroomEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroomEditor.Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealClassroom.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealClassroom.uproject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +105,14 @@
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupInterface.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HammeringPawn.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HammeringPawn.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/PhysicalHandPawn.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PhysicalHandPawn.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/VRPhysicalHandComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/VRPhysicalHandComponent.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/VRPhysicalHandActor.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/VRPhysicalHandActor.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/VRPawn.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/VRPawn.cpp" />
       </list>
     </option>
   </component>
@@ -94,7 +135,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="C++ Project.UnrealClassroom">
+  <component name="RunManager" selected="C++ Project.UE4">
     <configuration name="UE4" type="CppProject" factoryName="C++ Project">
       <configuration_1>
         <option name="CONFIGURATION" value="DebugGame Editor" />
@@ -322,7 +363,11 @@
       <workItem from="1602330494109" duration="4985000" />
       <workItem from="1602596832797" duration="62304000" />
       <workItem from="1603018301536" duration="24920000" />
-      <workItem from="1603113274624" duration="1686000" />
+      <workItem from="1603113274624" duration="5921000" />
+      <workItem from="1603657641499" duration="1065000" />
+      <workItem from="1603658786360" duration="87000" />
+      <workItem from="1603658893950" duration="3346000" />
+      <workItem from="1603706526241" duration="12772000" />
     </task>
     <servers />
   </component>
@@ -348,6 +393,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1027" y="555" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1603658683360">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1027" y="555" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.2560.1400@0.0.2560.1400" timestamp="1603658683360" />
     <state width="2517" height="534" key="GridCell.Tab.0.bottom" timestamp="1602883437056">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -412,9 +461,14 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="2517" height="534" key="GridCell.Tab.3.right/0.0.2560.1440@0.0.2560.1440" timestamp="1602883437057" />
-    <state x="1141" y="426" key="RiderGenerateDialog" timestamp="1602705580779">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="860" y="443" key="IDE.errors.dialog" timestamp="1603658128054">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="860" y="443" key="IDE.errors.dialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603658128054" />
+    <state x="1141" y="414" key="RiderGenerateDialog" timestamp="1603718130911">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1141" y="414" key="RiderGenerateDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603718130911" />
     <state x="1141" y="426" key="RiderGenerateDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1602705580779" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1603030798736">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -428,9 +482,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="936" y="340" key="run.anything.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1602877400651" />
-    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1603113729267">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="943" y="316" width="672" height="660" key="search.everywhere.popup" timestamp="1603715261850">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="943" y="316" width="672" height="660" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1603715261850" />
     <state x="943" y="325" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603113729267" />
   </component>
 </project>

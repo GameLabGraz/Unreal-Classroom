@@ -84,7 +84,7 @@ public:
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
     FORCEINLINE float GetGripStat(const bool bIsRightHanded) { return bIsRightHanded ? RightGripStat : LeftGripStat; }
-    int GetTypeOfGrab(const bool bIsRightHanded) const;
+    int GetTypeOfGrab(bool bIsRightHanded) const;
 
 protected:
     UPROPERTY(EditAnywhere, Category = "Debuging")

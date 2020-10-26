@@ -8,18 +8,18 @@
 UENUM()
 enum EGrabType
 {
-	Controller UMETA(DisplayName = "Controller"),
-	Box UMETA(DisplayName = "Box"),
-	Bow UMETA(DisplayName = "Bow"),
-	Sphere UMETA(DisplayName = "Sphere"),
-	Pointing UMETA(DisplayName = "Pointing"),
+    Controller UMETA(DisplayName = "Controller"),
+    Box UMETA(DisplayName = "Box"),
+    Bow UMETA(DisplayName = "Bow"),
+    Sphere UMETA(DisplayName = "Sphere"),
+    Pointing UMETA(DisplayName = "Pointing"),
 };
 
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
 class UPickupInterface : public UInterface
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 };
 
 /**
@@ -27,12 +27,16 @@ class UPickupInterface : public UInterface
  */
 class UNREALCLASSROOM_API IPickupInterface
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	virtual void GrabPressed(USceneComponent* AttachTo) {}
+    virtual void GrabPressed(USceneComponent* AttachTo)
+    {
+    }
 
-	virtual void GrabReleased() {}
+    virtual void GrabReleased()
+    {
+    }
 
-	virtual int GetGrabType() {return 0;}
+    virtual int GetGrabType() { return 0; }
 };

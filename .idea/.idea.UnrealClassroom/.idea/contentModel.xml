@@ -43008,6 +43008,27 @@
             <e p="AMD_AGS.Build.cs" t="Include" />
           </e>
         </e>
+        <e p="Android" t="Include">
+          <e p="cxa_demangle" t="Include">
+            <e p="AndroidOpenSourceProject.tps" t="Include" />
+            <e p="cxademangle.Build.cs" t="Include" />
+            <e p="cxademangle.tps" t="Include" />
+          </e>
+          <e p="detex" t="Include">
+            <e p="AndroidETC.cpp" t="Include" />
+            <e p="AndroidETC.h" t="Include" />
+            <e p="AndroidETCConvert.cpp" t="Include" />
+            <e p="AndroidETCHalfFloat.cpp" t="Include" />
+            <e p="AndroidETCInternal.h" t="Include" />
+            <e p="detex.Build.cs" t="Include" />
+            <e p="detex.tps" t="Include" />
+          </e>
+          <e p="libunwind" t="Include">
+            <e p="libunwind.Build.cs" t="Include" />
+            <e p="libunwind.tps" t="Include" />
+            <e p="ReadMe.txt" t="Include" />
+          </e>
+        </e>
         <e p="Asio" t="Include">
           <e p="Asio.Build.cs" t="Include" />
           <e p="Asio.tps" t="Include" />
@@ -43474,6 +43495,9 @@
             <e p="PickupInterface.cpp" t="Include" />
             <e p="UnrealClassroom.cpp" t="Include" />
             <e p="UnrealClassroomGameModeBase.cpp" t="Include" />
+            <e p="VRPawn.cpp" t="Include" />
+            <e p="VRPhysicalHandActor.cpp" t="Include" />
+            <e p="VRPhysicalHandComponent.cpp" t="Include" />
           </e>
           <e p="Public" t="Include">
             <e p="HammeringPawn.h" t="Include" />
@@ -43484,6 +43508,9 @@
             <e p="PickupInterface.h" t="Include" />
             <e p="UnrealClassroom.h" t="Include" />
             <e p="UnrealClassroomGameModeBase.h" t="Include" />
+            <e p="VRPawn.h" t="Include" />
+            <e p="VRPhysicalHandActor.h" t="Include" />
+            <e p="VRPhysicalHandComponent.h" t="Include" />
           </e>
           <e p="UnrealClassroom.Build.cs" t="Include" />
         </e>
@@ -43491,6 +43518,7 @@
         <e p="UnrealClassroomEditor.Target.cs" t="Include" />
       </e>
       <e p="UnrealClassroom.sln" t="IncludeFlat" />
+      <e p="UnrealClassroom.sln.DotSettings.user" t="Include" />
       <e p="UnrealClassroom.uproject" t="Include" />
       <e p="Visualizers" t="Include" />
     </e>

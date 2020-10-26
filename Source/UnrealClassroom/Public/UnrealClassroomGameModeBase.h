@@ -12,6 +12,5 @@
 UCLASS()
 class UNREALCLASSROOM_API AUnrealClassroomGameModeBase : public AGameModeBase
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
 };

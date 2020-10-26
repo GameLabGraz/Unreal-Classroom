@@ -176,7 +176,7 @@ void AHammeringPawn::OnPressTeleportRight()
     bIsUpdatingTeleportDestination = true;
     bIsRightHandDoTeleportation = true;
     bIsTrackingRightAxis = false;
-    RightTempAnimType = EGrabType::Pointing;
+    RightTempAnimType = Pointing;
     RightGripStat = 1.0;
 }
 
@@ -204,7 +204,7 @@ void AHammeringPawn::OnPressTeleportLeft()
     if (bIsRightHandDoTeleportation) { return; }
     bIsUpdatingTeleportDestination = true;
     bIsTrackingLeftAxis = false;
-    LeftTempAnimType = EGrabType::Pointing;
+    LeftTempAnimType = Pointing;
     LeftGripStat = 1.0;
 }
 
@@ -471,7 +471,7 @@ int AHammeringPawn::GetTypeOfGrab(const bool bIsRightHanded) const
         }
         return RightTempAnimType;
     }
-    
+
     if (bIsTrackingLeftAxis)
     {
         if (LeftAttachedPickup != nullptr) { return LeftAttachedPickup->GetGrabType(); }

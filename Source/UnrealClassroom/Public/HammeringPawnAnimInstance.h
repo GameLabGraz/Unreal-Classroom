@@ -11,42 +11,43 @@
 USTRUCT(BlueprintType)
 struct FHammeringPawnAnimInstanceProxy : public FAnimInstanceProxy
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-	virtual void PreUpdate(UAnimInstance* InAnimInstance, float DeltaSeconds) override;
-	
-	UPROPERTY(Transient, BlueprintReadOnly, VisibleAnywhere)
-	float Grip = 0.0f;
+    virtual void PreUpdate(UAnimInstance* InAnimInstance, float DeltaSeconds) override;
 
-	UPROPERTY(Transient, BlueprintReadOnly, VisibleAnywhere)
-	int TypeOfGrab = 0.0f;
+    UPROPERTY(Transient, BlueprintReadOnly, VisibleAnywhere)
+    float Grip = 0.0f;
+
+    UPROPERTY(Transient, BlueprintReadOnly, VisibleAnywhere)
+    int TypeOfGrab = 0.0f;
 };
 
 UCLASS()
 class UNREALCLASSROOM_API UHammeringPawnAnimInstance : public UAnimInstance
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 protected:
 
-	UPROPERTY(Transient, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
-	FHammeringPawnAnimInstanceProxy GripProxy;
+    UPROPERTY(Transient, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+    FHammeringPawnAnimInstanceProxy GripProxy;
 
-	virtual FAnimInstanceProxy* CreateAnimInstanceProxy() override
-	{
-		return &GripProxy;
-	}
+    virtual FAnimInstanceProxy* CreateAnimInstanceProxy() override
+    {
+        return &GripProxy;
+    }
 
-	virtual void DestroyAnimInstanceProxy(FAnimInstanceProxy* InProxy) override {}
+    virtual void DestroyAnimInstanceProxy(FAnimInstanceProxy* InProxy) override
+    {
+    }
 
-	virtual void NativeInitializeAnimation() override;
+    virtual void NativeInitializeAnimation() override;
 
-	UPROPERTY(EditDefaultsOnly)
-	bool bIsRightHanded = false;
-	
-	UPROPERTY(Transient)
-	AHammeringPawn* Pawn;
+    UPROPERTY(EditDefaultsOnly)
+    bool bIsRightHanded = false;
 
-	friend struct FHammeringPawnAnimInstanceProxy;
-	
+    UPROPERTY(Transient)
+    AHammeringPawn* Pawn;
+
+    friend struct FHammeringPawnAnimInstanceProxy;
 };
