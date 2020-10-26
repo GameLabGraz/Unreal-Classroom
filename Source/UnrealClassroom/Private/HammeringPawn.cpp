@@ -11,6 +11,7 @@
 #include "HammeringStatics.h"
 #include "Kismet/GameplayStatics.h"
 #include "NavigationSystem.h"
+#include "PhysicsEngine/PhysicsConstraintComponent.h"
 
 
 AHammeringPawn::AHammeringPawn()
@@ -39,7 +40,32 @@ AHammeringPawn::AHammeringPawn()
     LeftMotionControllerComponent->SetGenerateOverlapEvents(false);
 
     LeftHandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("LeftHandMesh"));
-    LeftHandMesh->SetupAttachment(LeftMotionControllerComponent);
+    LeftHandMesh->SetupAttachment(VROffset);
+    LeftHandMesh->SetCollisionProfileName("PhysicsActor");
+    LeftHandMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+
+    LeftHandPivot = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LeftHandPivot"));
+    LeftHandPivot->SetupAttachment(LeftMotionControllerComponent);
+    LeftHandPivot->SetCollisionObjectType(ECC_WorldDynamic);
+    LeftHandPivot->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+    LeftHandPivot->SetCollisionResponseToAllChannels(ECR_Overlap);
+    LeftHandPivot->SetGenerateOverlapEvents(false);
+    LeftHandPivot->SetHiddenInGame(true);
+    LeftHandPivot->SetMobility(EComponentMobility::Movable);
+
+    LeftHandPhysics = CreateDefaultSubobject<UPhysicsConstraintComponent>(TEXT("LeftHandPhysics"));
+    LeftHandPhysics->SetupAttachment(LeftMotionControllerComponent);
+    LeftHandPhysics->SetLinearXLimit(ELinearConstraintMotion::LCM_Limited, 90.0f);
+    LeftHandPhysics->SetLinearYLimit(ELinearConstraintMotion::LCM_Limited, 90.0f);
+    LeftHandPhysics->SetLinearZLimit(ELinearConstraintMotion::LCM_Limited, 90.0f);
+    LeftHandPhysics->SetAngularSwing1Limit(EAngularConstraintMotion::ACM_Locked, 0.0f);
+    LeftHandPhysics->SetAngularSwing2Limit(EAngularConstraintMotion::ACM_Locked, 0.0f);
+    LeftHandPhysics->SetAngularTwistLimit(EAngularConstraintMotion::ACM_Locked, 0.0f);
+    LeftHandPhysics->SetLinearPositionDrive(true, true, true);
+    LeftHandPhysics->SetLinearVelocityDrive(true, true, true);
+    LeftHandPhysics->SetLinearDriveParams(2000, 200, 0);
+    LeftHandPhysics->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
+    LeftHandPhysics->SetConstrainedComponents(LeftHandPivot, NAME_None, LeftHandMesh, NAME_None);
 
     LeftGrabSphere = CreateDefaultSubobject<USphereComponent>(TEXT("LeftGrabSphere"));
     LeftGrabSphere->SetupAttachment(LeftHandMesh);
@@ -63,7 +89,32 @@ AHammeringPawn::AHammeringPawn()
     RightMotionControllerComponent->SetGenerateOverlapEvents(false);
 
     RightHandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("RightHandMesh"));
-    RightHandMesh->SetupAttachment(RightMotionControllerComponent);
+    RightHandMesh->SetupAttachment(VROffset);
+    RightHandMesh->SetCollisionProfileName("PhysicsActor");
+    RightHandMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+
+    RightHandPivot = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RightHandPivot"));
+    RightHandPivot->SetupAttachment(RightMotionControllerComponent);
+    RightHandPivot->SetCollisionObjectType(ECC_WorldDynamic);
+    RightHandPivot->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+    RightHandPivot->SetCollisionResponseToAllChannels(ECR_Overlap);
+    RightHandPivot->SetGenerateOverlapEvents(false);
+    RightHandPivot->SetHiddenInGame(true);
+    RightHandPivot->SetMobility(EComponentMobility::Movable);
+
+    RightHandPhysics = CreateDefaultSubobject<UPhysicsConstraintComponent>(TEXT("RightHandPhysics"));
+    RightHandPhysics->SetupAttachment(RightMotionControllerComponent);
+    RightHandPhysics->SetLinearXLimit(ELinearConstraintMotion::LCM_Limited, 90.0f);
+    RightHandPhysics->SetLinearYLimit(ELinearConstraintMotion::LCM_Limited, 90.0f);
+    RightHandPhysics->SetLinearZLimit(ELinearConstraintMotion::LCM_Limited, 90.0f);
+    RightHandPhysics->SetAngularSwing1Limit(EAngularConstraintMotion::ACM_Locked, 0.0f);
+    RightHandPhysics->SetAngularSwing2Limit(EAngularConstraintMotion::ACM_Locked, 0.0f);
+    RightHandPhysics->SetAngularTwistLimit(EAngularConstraintMotion::ACM_Locked, 0.0f);
+    RightHandPhysics->SetLinearPositionDrive(true, true, true);
+    RightHandPhysics->SetLinearVelocityDrive(true, true, true);
+    RightHandPhysics->SetLinearDriveParams(2000, 200, 0);
+    RightHandPhysics->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
+    RightHandPhysics->SetConstrainedComponents(RightHandPivot, NAME_None, RightHandMesh, NAME_None);
 
     RightGrabSphere = CreateDefaultSubobject<USphereComponent>(TEXT("RightGrabSphere"));
     RightGrabSphere->SetupAttachment(RightHandMesh);

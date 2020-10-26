@@ -6,8 +6,8 @@
 #include "PickupActor.h"
 #include "PickupInterface.h"
 #include "GameFramework/Pawn.h"
-#include "HammeringPawn.generated.h"
 
+#include "HammeringPawn.generated.h"
 
 struct FPredictProjectilePathResult;
 struct FPredictProjectilePathParams;
@@ -19,6 +19,7 @@ class UMotionControllerComponent;
 class USphereComponent;
 class UCameraComponent;
 class UArrowComponent;
+class UPhysicsConstraintComponent;
 
 constexpr float GripOpen = 0.0f;
 constexpr float GripClose = 1.0f;
@@ -155,6 +156,12 @@ protected:
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
     USkeletalMeshComponent* RightHandMesh;
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+    UStaticMeshComponent* RightHandPivot;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+    UPhysicsConstraintComponent* RightHandPhysics;
+
     UPROPERTY(VisibleAnywhere)
     USphereComponent* RightGrabSphere;
 
@@ -166,6 +173,12 @@ protected:
 
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
     USkeletalMeshComponent* LeftHandMesh;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+    UStaticMeshComponent* LeftHandPivot;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+    UPhysicsConstraintComponent* LeftHandPhysics;
 
     UPROPERTY(VisibleAnywhere)
     USphereComponent* LeftGrabSphere;

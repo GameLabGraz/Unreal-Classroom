@@ -43510,7 +43510,6 @@
             <e p="UnrealClassroomGameModeBase.h" t="Include" />
             <e p="VRPawn.h" t="Include" />
             <e p="VRPhysicalHandActor.h" t="Include" />
-            <e p="VRPhysicalHandComponent.h" t="Include" />
           </e>
           <e p="UnrealClassroom.Build.cs" t="Include" />
         </e>
