@@ -43490,6 +43490,7 @@
           <e p="Private" t="Include">
             <e p="HammeringPawn.cpp" t="Include" />
             <e p="HammeringPawnAnimInstance.cpp" t="Include" />
+            <e p="LeverHandleActor.cpp" t="Include" />
             <e p="PhysicalConstraintPickupActor.cpp" t="Include" />
             <e p="PickupActor.cpp" t="Include" />
             <e p="PickupInterface.cpp" t="Include" />
@@ -43497,12 +43498,12 @@
             <e p="UnrealClassroomGameModeBase.cpp" t="Include" />
             <e p="VRPawn.cpp" t="Include" />
             <e p="VRPhysicalHandActor.cpp" t="Include" />
-            <e p="VRPhysicalHandComponent.cpp" t="Include" />
           </e>
           <e p="Public" t="Include">
             <e p="HammeringPawn.h" t="Include" />
             <e p="HammeringPawnAnimInstance.h" t="Include" />
             <e p="HammeringStatics.h" t="Include" />
+            <e p="LeverHandleActor.h" t="Include" />
             <e p="PhysicalConstraintPickupActor.h" t="Include" />
             <e p="PickupActor.h" t="Include" />
             <e p="PickupInterface.h" t="Include" />
@@ -43516,6 +43517,7 @@
         <e p="UnrealClassroom.Target.cs" t="Include" />
         <e p="UnrealClassroomEditor.Target.cs" t="Include" />
       </e>
+      <e p="UnrealClassroom.png" t="Include" />
       <e p="UnrealClassroom.sln" t="IncludeFlat" />
       <e p="UnrealClassroom.sln.DotSettings.user" t="Include" />
       <e p="UnrealClassroom.uproject" t="Include" />

@@ -89,7 +89,10 @@ public:
 
 protected:
     UPROPERTY(EditAnywhere, Category = "Debuging")
-    bool IsShowingDebug = true;
+    bool bIsShowingDebug = true;
+
+    UPROPERTY(EditAnywhere, Category = "Debuging")
+    bool bIsShowingGrabDebug = true;
 
     UPROPERTY(EditAnywhere, Category = "[Properties]: Teleportation")
     float MaxTeleportDistance = 1000.0f;

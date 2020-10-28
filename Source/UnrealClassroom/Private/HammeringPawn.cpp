@@ -139,7 +139,7 @@ void AHammeringPawn::BeginPlay()
 {
     Super::BeginPlay();
 
-    if (IsShowingDebug)
+    if (bIsShowingDebug)
     {
         RightGrabSphere->SetHiddenInGame(false);
         LeftGrabSphere->SetHiddenInGame(false);
@@ -150,7 +150,7 @@ void AHammeringPawn::BeginPlay()
 
 void AHammeringPawn::OnGrabRight()
 {
-    if (IsShowingDebug)
+    if (bIsShowingDebug)
     {
         UE_LOG(LogTemp, Log, TEXT("Grabing Right"));
         if (GEngine)
@@ -177,7 +177,7 @@ void AHammeringPawn::OnGrabRight()
 
 void AHammeringPawn::OnGrabLeft()
 {
-    if (IsShowingDebug)
+    if (bIsShowingDebug)
     {
         UE_LOG(LogTemp, Log, TEXT("Grabing Left"));
         if (GEngine)
@@ -429,7 +429,7 @@ void AHammeringPawn::GrabAxisRight(const float AxisValue)
 {
     if (!bIsTrackingRightAxis) { return; }
 
-    if (IsShowingDebug)
+    if (bIsShowingDebug)
     {
         UE_LOG(LogTemp, Log, TEXT("Axis Value %f"), AxisValue);
         if (GEngine)
@@ -446,7 +446,7 @@ void AHammeringPawn::GrabAxisLeft(const float AxisValue)
 {
     if (!bIsTrackingLeftAxis) { return; }
 
-    if (IsShowingDebug)
+    if (bIsShowingDebug)
     {
         UE_LOG(LogTemp, Log, TEXT("Axis Value %f"), AxisValue);
         if (GEngine)
@@ -461,25 +461,64 @@ void AHammeringPawn::GrabAxisLeft(const float AxisValue)
 
 AActor* AHammeringPawn::GetNearestOverlappingPickup(USphereComponent* SphereComponent)
 {
+    // AActor* NearestPickup = nullptr;
+    // TArray<AActor*> OverlappingActors;
+
+    // SphereComponent->GetOverlappingActors(OverlappingActors);
+    //
+    // for(auto Actor:OverlappingActors)
+    // {
+    //     if(GEngine)
+    //     {
+    //         GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Red,
+    //                              FString::Printf(TEXT("OverlappedActor: %s"), *Actor->GetName()));
+    //     }
+    // }
+    //
+    // float ShortestDistance = TNumericLimits<float>::Max();
+    // for (auto Actor : OverlappingActors)
+    // {
+    //     if (Actor->GetClass()->ImplementsInterface(UPickupInterface::StaticClass()))
+    //     {
+    //         const auto Distance = FVector::Distance(SphereComponent->GetComponentLocation(), Actor->GetActorLocation());
+    //         if (Distance < ShortestDistance)
+    //         {
+    //             ShortestDistance = Distance;
+    //             NearestPickup = Actor;
+    //         }
+    //     }
+    // }
+
     AActor* NearestPickup = nullptr;
-    TArray<AActor*> OverlappingActors;
+    TArray<UPrimitiveComponent*> OverlappingComponents;
 
-    SphereComponent->GetOverlappingActors(OverlappingActors);
+    SphereComponent->GetOverlappingComponents(OverlappingComponents);
 
-    float ShortestDistance = TNumericLimits<float>::Max();
-    for (auto Actor : OverlappingActors)
+    for(auto Component:OverlappingComponents)
     {
-        if (Actor->GetClass()->ImplementsInterface(UPickupInterface::StaticClass()))
+        if(GEngine)
         {
-            const auto Distance = FVector::Distance(SphereComponent->GetComponentLocation(), Actor->GetActorLocation());
-            if (Distance < ShortestDistance)
-            {
-                ShortestDistance = Distance;
-                NearestPickup = Actor;
-            }
+            GEngine->AddOnScreenDebugMessage(INDEX_NONE, 3.0f, FColor::Red,
+                                 FString::Printf(TEXT("OverlappedActor: %s"), *Component->GetName()));
         }
     }
 
+    float ShortestDistance = TNumericLimits<float>::Max();
+    for (auto Component : OverlappingComponents)
+    {
+        if (Component->GetOwner()->GetClass()->ImplementsInterface(UPickupInterface::StaticClass()))
+        {
+            const auto Distance = FVector::Distance(SphereComponent->GetComponentLocation(), Component->GetComponentLocation());
+            if (Distance < ShortestDistance)
+            {
+                ShortestDistance = Distance;
+                NearestPickup = Component->GetOwner();
+                GEngine->AddOnScreenDebugMessage(INDEX_NONE, 20.0f, FColor::Black,
+                     FString::Printf(TEXT("Nearest Pickup: %s"), *Component->GetName()));
+            }
+        }
+    }
+    
     return NearestPickup;
 }
 
