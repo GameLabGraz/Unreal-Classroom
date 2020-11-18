@@ -4,6 +4,8 @@
 
 
 
+#include "GrabbableInterface.h"
+#include "Components/SphereComponent.h"
 #include "GameFramework/Character.h"
 #include "FPCharacter.generated.h"
 
@@ -24,6 +26,12 @@ public:
     virtual void Tick(float DeltaTime) override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+    void InteractionRightPressed();
+    void InteractionRightReleased();
+
+    void InteractionLeftPressed();
+    void InteractionLeftReleased();
+
     void MoveForward(float Value);
     void MoveRight(float Value);
 
@@ -34,6 +42,7 @@ public:
     void GrabLeft(float Value);
 
     void GrabRaycast();
+    AActor* FindNearestGrabbableActor(USphereComponent* HandGrabSphere);
 
 protected:
     virtual void BeginPlay() override;
@@ -75,4 +84,16 @@ public:
 
     FHitResult GrabRaycastResult;
     bool IsGrabRaycastHit = false;
+
+    bool bIsReadyForGrabRight = false;
+    bool bIsReadyForGrabLeft = false;
+
+    UPROPERTY()
+    AActor* SuspectActorForGrab = nullptr;
+
+    UPROPERTY(Transient)
+    AActor* RightGrabbedActor = nullptr;
+    
+    UPROPERTY(Transient)
+    AActor* LeftGrabbedActor = nullptr;
 };

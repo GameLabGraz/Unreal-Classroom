@@ -48957,6 +48957,7 @@
           <e p="Private" t="Include">
             <e p="FPCHandComponent.cpp" t="Include" />
             <e p="FPCharacter.cpp" t="Include" />
+            <e p="GrabbableInterface.cpp" t="Include" />
             <e p="HandSkeletalMeshComponent.cpp" t="Include" />
             <e p="LeverActor.cpp" t="Include" />
             <e p="PickupActor.cpp" t="Include" />
@@ -48966,11 +48967,13 @@
           <e p="Public" t="Include">
             <e p="FPCHandComponent.h" t="Include" />
             <e p="FPCharacter.h" t="Include" />
+            <e p="GrabbableInterface.h" t="Include" />
             <e p="HandSkeletalMeshComponent.h" t="Include" />
             <e p="LeverActor.h" t="Include" />
             <e p="PickupActor.h" t="Include" />
             <e p="UnrealClassroom.h" t="Include" />
             <e p="UnrealClassroomGameModeBase.h" t="Include" />
+            <e p="UnrealClassRoomStatics.h" t="Include" />
           </e>
           <e p="UnrealClassroom.Build.cs" t="Include" />
         </e>

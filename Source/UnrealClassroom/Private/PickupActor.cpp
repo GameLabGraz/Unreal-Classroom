@@ -1,27 +1,62 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "PickupActor.h"
 
-// Sets default values
+#include "UnrealClassRoomStatics.h"
+#include "Components/SphereComponent.h"
+
 APickupActor::APickupActor()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>("StaticMeshComponent");
+	SetRootComponent(StaticMeshComponent);
+	StaticMeshComponent->SetCollisionObjectType(ECC_Grabbable);
+	StaticMeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	StaticMeshComponent->SetSimulatePhysics(true);
+
+	CustomAttachPoint = CreateDefaultSubobject<USphereComponent>(TEXT("CustomAttachPoint"));
+	CustomAttachPoint->SetupAttachment(StaticMeshComponent);
+	CustomAttachPoint->SetSphereRadius(10.0f);
+	CustomAttachPoint->SetCollisionResponseToAllChannels(ECR_Ignore);
+	CustomAttachPoint->ShapeColor = FColor::Emerald;
+	CustomAttachPoint->SetHiddenInGame(true);
 
 }
 
-// Called when the game starts or when spawned
 void APickupActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
-// Called every frame
 void APickupActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
 
+void APickupActor::GrabPressed(USceneComponent* AttachTo)
+{
+	StaticMeshComponent->SetSimulatePhysics(false);
+	StaticMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	
+	if(bSnapHandToMesh)
+	{
+		AttachTo->SetWorldLocation(CustomAttachPoint->GetComponentLocation());
+		StaticMeshComponent->AttachToComponent(AttachTo,FAttachmentTransformRules::KeepWorldTransform);
+	}
+	else
+	{
+		StaticMeshComponent->AttachToComponent(AttachTo,FAttachmentTransformRules::KeepWorldTransform);
+	}
+}
+
+void APickupActor::GrabReleased()
+{
+	StaticMeshComponent->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	StaticMeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	StaticMeshComponent->SetSimulatePhysics(true);
+}
+
+int APickupActor::GetGrabType()
+{
+	return TypeOfGrab;
 }
 

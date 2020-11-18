@@ -1,26 +1,46 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "GrabbableInterface.h"
 #include "GameFramework/Actor.h"
 #include "PickupActor.generated.h"
 
+class USphereComponent;
 UCLASS()
-class UNREALCLASSROOM_API APickupActor : public AActor
+class UNREALCLASSROOM_API APickupActor : public AActor, public IGrabbableInterface
 {
 	GENERATED_BODY()
-	
+
+	// Methods
 public:	
-	// Sets default values for this actor's properties
 	APickupActor();
+	virtual void Tick(float DeltaTime) override;
+
+	virtual void GrabPressed(USceneComponent* AttachTo) override;
+	virtual void GrabReleased() override;
+	virtual int GetGrabType() override;
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	// Members
+public:
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: Debug")
+	bool IsDebuggingGrab = false;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: Components")
+	UStaticMeshComponent* StaticMeshComponent;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: Components")
+	USphereComponent* CustomAttachPoint;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: AttachBehaviour")
+	bool bSnapHandToMesh;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: AttachBehaviour")
+	TEnumAsByte<EGrabType> TypeOfGrab;
+
 
 };
