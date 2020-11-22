@@ -203,6 +203,28 @@ void AFPCharacter::ReAttachHand(EHandType HandType)
     }
 }
 
+float AFPCharacter::GetPoseProgress(EHandType HandType)
+{
+    return HandType == RightHand ? RightPoseProgress : LeftPoseProgress;
+}
+
+int AFPCharacter::GetTypeOfGrab(EHandType HandType)
+{
+    if(HandType == RightHand || HandType == LeftHand)
+    {
+        if(SuspectActorForGrab != nullptr)
+        {
+            auto GrabActor = Cast<IGrabbableInterface>(SuspectActorForGrab);
+            if (GrabActor != nullptr)
+            {
+                return GrabActor->GetGrabType();
+            }
+            return 0;
+        }
+    }
+    return 0;
+}
+
 
 void AFPCharacter::MoveForward(float Value)
 {
@@ -248,6 +270,8 @@ void AFPCharacter::GrabRight(float Value)
 
     if (Value < 0.01)
     {
+        RightPoseProgress = 0;
+
         ResetHand(RightHand);
         MinLocation = RightHandComponent->GetComponentLocation();
         MinRotation = RightHandComponent->GetComponentRotation();
@@ -270,7 +294,8 @@ void AFPCharacter::GrabRight(float Value)
 
         if (GrabTarget != nullptr)
         {
-            // const auto MaxLocation = GrabTarget->CustomAttachPoint->GetComponentLocation();
+            RightPoseProgress = Value;
+            
             const auto MaxLocation = GrabTarget->AttachPositioning->GetComponentLocation();
             const auto MaxRotation = GrabTarget->AttachPositioning->GetComponentRotation();
             const auto NewWorldLocation = FMath::Lerp(MinLocation, MaxLocation, Value);
@@ -312,6 +337,8 @@ void AFPCharacter::GrabLeft(float Value)
 
     if (Value < 0.01)
     {
+        LeftPoseProgress = 0.0f;
+        
         ResetHand(LeftHand);
         MinLocation = LeftHandComponent->GetComponentLocation();
         MinRotation = LeftHandComponent->GetComponentRotation();
@@ -334,7 +361,8 @@ void AFPCharacter::GrabLeft(float Value)
 
         if (GrabTarget != nullptr)
         {
-            // const auto MaxLocation = GrabTarget->CustomAttachPoint->GetComponentLocation();
+            LeftPoseProgress = Value;
+            
             const auto MaxLocation = GrabTarget->AttachPositioning->GetComponentLocation();
             const auto MaxRotation = GrabTarget->AttachPositioning->GetComponentRotation();
             const auto NewWorldLocation = FMath::Lerp(MinLocation, MaxLocation, Value);

@@ -48958,6 +48958,7 @@
             <e p="FPCHandComponent.cpp" t="Include" />
             <e p="FPCharacter.cpp" t="Include" />
             <e p="GrabbableInterface.cpp" t="Include" />
+            <e p="HandAnimInstance.cpp" t="Include" />
             <e p="HandSkeletalMeshComponent.cpp" t="Include" />
             <e p="LeverActor.cpp" t="Include" />
             <e p="LeverInteractableActor.cpp" t="Include" />
@@ -48969,6 +48970,7 @@
             <e p="FPCHandComponent.h" t="Include" />
             <e p="FPCharacter.h" t="Include" />
             <e p="GrabbableInterface.h" t="Include" />
+            <e p="HandAnimInstance.h" t="Include" />
             <e p="HandSkeletalMeshComponent.h" t="Include" />
             <e p="LeverActor.h" t="Include" />
             <e p="LeverInteractableActor.h" t="Include" />

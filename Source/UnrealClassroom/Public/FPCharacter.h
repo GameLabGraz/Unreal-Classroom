@@ -45,6 +45,9 @@ public:
     void ResetHand(EHandType HandType);
     void ReAttachHand(EHandType HandType);
 
+    float GetPoseProgress(EHandType HandType);
+    int GetTypeOfGrab(EHandType HandType);
+
 protected:
     virtual void BeginPlay() override;
 
@@ -84,6 +87,9 @@ public:
     FVector InitialRelativeLocationLeftHand;
     FRotator InitialRelativeRotationRightHand;
     FRotator InitialRelativeRotationLeftHand;
+
+    float RightPoseProgress;
+    float LeftPoseProgress;
 
     FHitResult GrabRaycastResult;
     bool IsGrabRaycastHit = false;
