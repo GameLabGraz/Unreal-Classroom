@@ -48960,6 +48960,7 @@
             <e p="GrabbableInterface.cpp" t="Include" />
             <e p="HandSkeletalMeshComponent.cpp" t="Include" />
             <e p="LeverActor.cpp" t="Include" />
+            <e p="LeverInteractableActor.cpp" t="Include" />
             <e p="PickupActor.cpp" t="Include" />
             <e p="UnrealClassroom.cpp" t="Include" />
             <e p="UnrealClassroomGameModeBase.cpp" t="Include" />
@@ -48970,6 +48971,7 @@
             <e p="GrabbableInterface.h" t="Include" />
             <e p="HandSkeletalMeshComponent.h" t="Include" />
             <e p="LeverActor.h" t="Include" />
+            <e p="LeverInteractableActor.h" t="Include" />
             <e p="PickupActor.h" t="Include" />
             <e p="UnrealClassroom.h" t="Include" />
             <e p="UnrealClassroomGameModeBase.h" t="Include" />

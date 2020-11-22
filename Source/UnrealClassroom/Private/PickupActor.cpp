@@ -5,58 +5,66 @@
 
 APickupActor::APickupActor()
 {
-	PrimaryActorTick.bCanEverTick = true;
+    PrimaryActorTick.bCanEverTick = true;
 
-	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>("StaticMeshComponent");
-	SetRootComponent(StaticMeshComponent);
-	StaticMeshComponent->SetCollisionObjectType(ECC_Grabbable);
-	StaticMeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-	StaticMeshComponent->SetSimulatePhysics(true);
+    BaseMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>("BaseMeshComponent");
+    SetRootComponent(BaseMeshComponent);
+    BaseMeshComponent->SetCollisionObjectType(ECC_Grabbable);
+    BaseMeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+    BaseMeshComponent->SetSimulatePhysics(true);
 
-	CustomAttachPoint = CreateDefaultSubobject<USphereComponent>(TEXT("CustomAttachPoint"));
-	CustomAttachPoint->SetupAttachment(StaticMeshComponent);
-	CustomAttachPoint->SetSphereRadius(10.0f);
-	CustomAttachPoint->SetCollisionResponseToAllChannels(ECR_Ignore);
-	CustomAttachPoint->ShapeColor = FColor::Emerald;
-	CustomAttachPoint->SetHiddenInGame(true);
-
+    CustomAttachPoint = CreateDefaultSubobject<USphereComponent>(TEXT("CustomAttachPoint"));
+    CustomAttachPoint->SetupAttachment(BaseMeshComponent);
+    CustomAttachPoint->SetSphereRadius(10.0f);
+    CustomAttachPoint->SetCollisionResponseToAllChannels(ECR_Ignore);
+    CustomAttachPoint->ShapeColor = FColor::Emerald;
+    CustomAttachPoint->SetHiddenInGame(true);
 }
 
 void APickupActor::BeginPlay()
 {
-	Super::BeginPlay();
+    Super::BeginPlay();
 }
 
 void APickupActor::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
+    Super::Tick(DeltaTime);
 }
 
 void APickupActor::GrabPressed(USceneComponent* AttachTo)
 {
-	StaticMeshComponent->SetSimulatePhysics(false);
-	StaticMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	
-	if(bSnapHandToMesh)
-	{
-		AttachTo->SetWorldLocation(CustomAttachPoint->GetComponentLocation());
-		StaticMeshComponent->AttachToComponent(AttachTo,FAttachmentTransformRules::KeepWorldTransform);
-	}
-	else
-	{
-		StaticMeshComponent->AttachToComponent(AttachTo,FAttachmentTransformRules::KeepWorldTransform);
-	}
+    if (BaseMeshComponent == nullptr)
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Black, FString::Printf(TEXT("BaseMeshComponent is missing")));
+        return;
+    }
+    BaseMeshComponent->SetSimulatePhysics(false);
+    BaseMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+    if (bSnapHandToMesh)
+    {
+        AttachTo->SetWorldLocation(CustomAttachPoint->GetComponentLocation());
+        BaseMeshComponent->AttachToComponent(AttachTo, FAttachmentTransformRules::KeepWorldTransform);
+    }
+    else
+    {
+        BaseMeshComponent->AttachToComponent(AttachTo, FAttachmentTransformRules::KeepWorldTransform);
+    }
 }
 
 void APickupActor::GrabReleased()
 {
-	StaticMeshComponent->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	StaticMeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-	StaticMeshComponent->SetSimulatePhysics(true);
+    if (BaseMeshComponent == nullptr)
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Black, FString::Printf(TEXT("BaseMeshComponent is missing")));
+        return;
+    }
+    BaseMeshComponent->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+    BaseMeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+    BaseMeshComponent->SetSimulatePhysics(true);
 }
 
 int APickupActor::GetGrabType()
 {
-	return TypeOfGrab;
+    return TypeOfGrab;
 }
-

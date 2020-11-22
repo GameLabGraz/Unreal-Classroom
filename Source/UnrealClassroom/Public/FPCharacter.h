@@ -3,16 +3,14 @@
 #include "CoreMinimal.h"
 
 
-
-#include "GrabbableInterface.h"
-#include "Components/SphereComponent.h"
+#include "HandSkeletalMeshComponent.h"
 #include "GameFramework/Character.h"
+
 #include "FPCharacter.generated.h"
 
+class USphereComponent;
 class UHandSkeletalMeshComponent;
-class UFPCHandComponent;
 class UCameraComponent;
-
 
 UCLASS()
 class UNREALCLASSROOM_API AFPCharacter : public ACharacter
@@ -43,6 +41,9 @@ public:
 
     void GrabRaycast();
     AActor* FindNearestGrabbableActor(USphereComponent* HandGrabSphere);
+
+    void ResetHand(EHandType HandType);
+    void ReAttachHand(EHandType HandType);
 
 protected:
     virtual void BeginPlay() override;
@@ -81,6 +82,8 @@ public:
     private:
     FVector InitialRelativeLocationRightHand;
     FVector InitialRelativeLocationLeftHand;
+    FRotator InitialRelativeRotationRightHand;
+    FRotator InitialRelativeRotationLeftHand;
 
     FHitResult GrabRaycastResult;
     bool IsGrabRaycastHit = false;
@@ -97,3 +100,5 @@ public:
     UPROPERTY(Transient)
     AActor* LeftGrabbedActor = nullptr;
 };
+
+

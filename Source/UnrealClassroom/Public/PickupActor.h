@@ -31,7 +31,7 @@ public:
 	bool IsDebuggingGrab = false;
 
 	UPROPERTY(EditAnywhere, Category = "[Property]: Components")
-	UStaticMeshComponent* StaticMeshComponent;
+	UStaticMeshComponent* BaseMeshComponent;
 
 	UPROPERTY(EditAnywhere, Category = "[Property]: Components")
 	USphereComponent* CustomAttachPoint;

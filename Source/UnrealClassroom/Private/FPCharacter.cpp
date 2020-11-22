@@ -6,6 +6,7 @@
 #include "Components/SphereComponent.h"
 #include "Camera/CameraComponent.h"
 #include "HandSkeletalMeshComponent.h"
+#include "LeverActor.h"
 #include "PickupActor.h"
 #include "Components/ArrowComponent.h"
 
@@ -23,11 +24,13 @@ AFPCharacter::AFPCharacter()
 
     RightHandComponent = CreateDefaultSubobject<UHandSkeletalMeshComponent>(TEXT("RightHand"));
     RightHandComponent->SetupAttachment(FPCamera);
+    RightHandComponent->HandType = RightHand;
     RightHandComponent->SetRelativeLocation(FVector(60.0f, 20.0f, -12.0f));
     RightHandComponent->GrabSphereComponent->SetRelativeLocation(FVector(6, 2, 0));
 
     LeftHandComponent = CreateDefaultSubobject<UHandSkeletalMeshComponent>(TEXT("LeftHand"));
     LeftHandComponent->SetupAttachment(FPCamera);
+    LeftHandComponent->HandType = LeftHand;
     LeftHandComponent->SetRelativeLocation(FVector(60.0f, -20.0f, -12.0f));
     LeftHandComponent->GrabSphereComponent->SetRelativeLocation(FVector(6, -2, 0));
 }
@@ -38,6 +41,8 @@ void AFPCharacter::BeginPlay()
 
     InitialRelativeLocationRightHand = RightHandComponent->GetRelativeLocation();
     InitialRelativeLocationLeftHand = LeftHandComponent->GetRelativeLocation();
+    InitialRelativeRotationRightHand = RightHandComponent->GetRelativeRotation();
+    InitialRelativeRotationLeftHand = LeftHandComponent->GetRelativeRotation();
 }
 
 void AFPCharacter::Tick(float DeltaTime)
@@ -53,13 +58,12 @@ void AFPCharacter::GrabRaycast()
     auto const EndLocation = StartLocation + FPCamera->GetForwardVector() * (MaxGrabDistance + HandDimension);
     IsGrabRaycastHit = GetWorld()->LineTraceSingleByChannel(GrabRaycastResult, StartLocation, EndLocation,
                                                             ECC_Visibility);
-    if(IsGrabRaycastHit)
+    if (IsGrabRaycastHit)
     {
-        const auto bImplementedGrabbable = GrabRaycastResult.Actor->GetClass()->ImplementsInterface(UGrabbableInterface::StaticClass());
-        if(bImplementedGrabbable)
+        const auto bImplementedGrabbable = GrabRaycastResult.Actor->GetClass()->ImplementsInterface(
+            UGrabbableInterface::StaticClass());
+        if (bImplementedGrabbable)
         {
-            
-
             SuspectActorForGrab = GrabRaycastResult.GetActor();
         }
     }
@@ -79,7 +83,7 @@ void AFPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
     PlayerInputComponent->BindAction("InteractionRight", EInputEvent::IE_Released, this,
                                      &AFPCharacter::InteractionRightReleased);
     PlayerInputComponent->BindAction("InteractionLeft", EInputEvent::IE_Pressed, this,
-                                    &AFPCharacter::InteractionLeftPressed);
+                                     &AFPCharacter::InteractionLeftPressed);
     PlayerInputComponent->BindAction("InteractionLeft", EInputEvent::IE_Released, this,
                                      &AFPCharacter::InteractionLeftReleased);
 
@@ -95,18 +99,18 @@ void AFPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void AFPCharacter::InteractionRightPressed()
 {
-    if(RightGrabbedActor != nullptr)
+    if (RightGrabbedActor != nullptr)
     {
         Cast<IGrabbableInterface>(RightGrabbedActor)->GrabReleased();
         RightGrabbedActor = nullptr;
         SuspectActorForGrab = nullptr;
         return;
     }
-    
-    if(bIsReadyForGrabRight)
+
+    if (bIsReadyForGrabRight)
     {
         const auto GrabTarget = Cast<IGrabbableInterface>(SuspectActorForGrab);
-        if(GrabTarget !=nullptr)
+        if (GrabTarget != nullptr)
         {
             GrabTarget->GrabPressed(RightHandComponent);
             RightGrabbedActor = SuspectActorForGrab;
@@ -123,18 +127,18 @@ void AFPCharacter::InteractionRightReleased()
 
 void AFPCharacter::InteractionLeftPressed()
 {
-    if(LeftGrabbedActor != nullptr)
+    if (LeftGrabbedActor != nullptr)
     {
         Cast<IGrabbableInterface>(LeftGrabbedActor)->GrabReleased();
         LeftGrabbedActor = nullptr;
         SuspectActorForGrab = nullptr;
         return;
     }
-    
-    if(bIsReadyForGrabLeft)
+
+    if (bIsReadyForGrabLeft)
     {
         const auto GrabTarget = Cast<IGrabbableInterface>(SuspectActorForGrab);
-        if(GrabTarget !=nullptr)
+        if (GrabTarget != nullptr)
         {
             GrabTarget->GrabPressed(LeftHandComponent);
             LeftGrabbedActor = SuspectActorForGrab;
@@ -158,17 +162,45 @@ AActor* AFPCharacter::FindNearestGrabbableActor(USphereComponent* HandGrabSphere
     {
         if (Comp->GetOwner()->GetClass()->ImplementsInterface(UGrabbableInterface::StaticClass()))
         {
-            const auto Distance = FVector::Distance(Comp->GetComponentLocation(), HandGrabSphere->GetComponentLocation());
+            const auto Distance = FVector::Distance(Comp->GetComponentLocation(),
+                                                    HandGrabSphere->GetComponentLocation());
             if (Distance < ShortestDistance)
             {
                 ShortestDistance = Distance;
                 GrabTarget = Comp->GetOwner();
-                
             }
         }
     }
-    
+
     return GrabTarget;
+}
+
+void AFPCharacter::ResetHand(EHandType HandType)
+{
+    if (HandType == RightHand)
+    {
+        RightHandComponent->SetRelativeLocation(InitialRelativeLocationRightHand);
+        RightHandComponent->SetRelativeRotation(InitialRelativeRotationRightHand);
+    }
+    else if (HandType == LeftHand)
+    {
+        LeftHandComponent->SetRelativeLocation(InitialRelativeLocationLeftHand);
+        LeftHandComponent->SetRelativeRotation(InitialRelativeRotationLeftHand);
+    }
+}
+
+void AFPCharacter::ReAttachHand(EHandType HandType)
+{
+    if (HandType == RightHand)
+    {
+        RightHandComponent->AttachToComponent(FPCamera, FAttachmentTransformRules::KeepWorldTransform);
+        ResetHand(RightHand);
+    }
+    else if (HandType == LeftHand)
+    {
+        LeftHandComponent->AttachToComponent(FPCamera, FAttachmentTransformRules::KeepWorldTransform);
+        ResetHand(LeftHand);
+    }
 }
 
 
@@ -213,23 +245,34 @@ void AFPCharacter::GrabRight(float Value)
     Value = FMath::Clamp(Value, 0.0f, 1.0f);
     auto MinLocation = RightHandComponent->GetComponentLocation();
 
-    if(Value < 0.01)
+    if (Value < 0.01)
     {
-        RightHandComponent->SetRelativeLocation(InitialRelativeLocationRightHand);
+        ResetHand(RightHand);
         MinLocation = RightHandComponent->GetComponentLocation();
+
+        if (RightGrabbedActor != nullptr)
+        {
+            const auto GrabTarget = Cast<IGrabbableInterface>(RightGrabbedActor);
+            if (GrabTarget != nullptr)
+            {
+                GrabTarget->GrabReleased();
+                RightGrabbedActor = nullptr;
+                SuspectActorForGrab = nullptr;
+            }
+        }
     }
-    
-    if(SuspectActorForGrab != nullptr)
+
+    if (SuspectActorForGrab != nullptr)
     {
         const auto GrabTarget = Cast<APickupActor>(SuspectActorForGrab);
 
-        if(GrabTarget != nullptr)
+        if (GrabTarget != nullptr)
         {
             const auto MaxLocation = GrabTarget->CustomAttachPoint->GetComponentLocation();
             const auto NewWorldLocation = FMath::Lerp(MinLocation, MaxLocation, Value);
             RightHandComponent->SetWorldLocation(NewWorldLocation);
 
-            if(Value > 0.95f)
+            if (Value > 0.95f)
             {
                 bIsReadyForGrabRight = true;
                 return;
@@ -239,14 +282,16 @@ void AFPCharacter::GrabRight(float Value)
     else
     {
         RightHandComponent->SetRelativeLocation(InitialRelativeLocationRightHand);
-        
+
         auto GrabRange = MaxGrabDistance;
         if (IsGrabRaycastHit)
         {
             GrabRange = FVector::Distance(FPCamera->GetComponentLocation(), GrabRaycastResult.Location) - HandDimension;
         }
-        
-        const auto NewWorldLocation = FMath::Lerp(MinLocation, FPCamera->GetComponentLocation() + FPCamera->GetForwardVector().GetSafeNormal() * GrabRange, Value);
+
+        const auto NewWorldLocation = FMath::Lerp(MinLocation,
+                                                  FPCamera->GetComponentLocation() + FPCamera->GetForwardVector().
+                                                  GetSafeNormal() * GrabRange, Value);
         RightHandComponent->SetWorldLocation(NewWorldLocation);
     }
 
@@ -258,23 +303,34 @@ void AFPCharacter::GrabLeft(float Value)
     Value = FMath::Clamp(Value, 0.0f, 1.0f);
     auto MinLocation = LeftHandComponent->GetComponentLocation();
 
-    if(Value < 0.01)
+    if (Value < 0.01)
     {
-        LeftHandComponent->SetRelativeLocation(InitialRelativeLocationLeftHand);
+        ResetHand(LeftHand);
         MinLocation = LeftHandComponent->GetComponentLocation();
+
+        if (LeftGrabbedActor != nullptr)
+        {
+            const auto GrabTarget = Cast<IGrabbableInterface>(LeftGrabbedActor);
+            if (GrabTarget != nullptr)
+            {
+                GrabTarget->GrabReleased();
+                LeftGrabbedActor = nullptr;
+                SuspectActorForGrab = nullptr;
+            }
+        }
     }
-    
-    if(SuspectActorForGrab != nullptr)
+
+    if (SuspectActorForGrab != nullptr)
     {
         const auto GrabTarget = Cast<APickupActor>(SuspectActorForGrab);
 
-        if(GrabTarget != nullptr)
+        if (GrabTarget != nullptr)
         {
             const auto MaxLocation = GrabTarget->CustomAttachPoint->GetComponentLocation();
             const auto NewWorldLocation = FMath::Lerp(MinLocation, MaxLocation, Value);
             LeftHandComponent->SetWorldLocation(NewWorldLocation);
 
-            if(Value > 0.95f)
+            if (Value > 0.95f)
             {
                 bIsReadyForGrabLeft = true;
                 return;
@@ -288,8 +344,10 @@ void AFPCharacter::GrabLeft(float Value)
         {
             GrabRange = FVector::Distance(FPCamera->GetComponentLocation(), GrabRaycastResult.Location) - HandDimension;
         }
-        
-        const auto NewWorldLocation = FMath::Lerp(MinLocation, FPCamera->GetComponentLocation() + FPCamera->GetForwardVector().GetSafeNormal() * GrabRange, Value);
+
+        const auto NewWorldLocation = FMath::Lerp(MinLocation,
+                                                  FPCamera->GetComponentLocation() + FPCamera->GetForwardVector().
+                                                  GetSafeNormal() * GrabRange, Value);
         LeftHandComponent->SetWorldLocation(NewWorldLocation);
     }
 

@@ -38,23 +38,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e78cfa0-ed84-4af0-a4f7-2f483d0d4bae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Interactable/Grabbable/BP_PickupActor_Box.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/Simple/Bloom/MI_Bloom_Green.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/Simple/SSS/MI_BasicSSS_White.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Materials/Simple/SSS/M_BasicSSS.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/GrabbableInterface.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/GrabbableInterface.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/UnrealClassRoomStatics.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/BP_Lever.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/BP_Lever_Test.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/BP_Lever_Test2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/Leather.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/Lever_Base.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/Lever_Handle.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/MI_Gold.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/MI_Gold_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/MI_Metal_Bright.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/MI_Metal_Mid.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/M_Metal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/Rubber.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Models/Interactable/Lever/SteamPunk/Wood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Leather_Collection/Leather_001/MI_Leather001_Lever.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Leather_Collection/Leather_001/oiztx2p_2K_AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Leather_Collection/Leather_001/oiztx2p_2K_Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Leather_Collection/Leather_001/oiztx2p_2K_Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Leather_Collection/Leather_001/oiztx2p_2K_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Leather_Collection/Leather_001/oiztx2p_2K_Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/M_Wood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_AO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_Albedo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_Displacement.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_Normal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_Roughness.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_001/ufipfbmew_2K_Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_002/MI_Wood002_Lever.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_002/uexnedfew_2K_AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_002/uexnedfew_2K_Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_002/uexnedfew_2K_Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_002/uexnedfew_2K_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_002/uexnedfew_2K_Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_003/MI_Wood003_Lever.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_003/tkjjfjefw_2K_AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_003/tkjjfjefw_2K_Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_003/tkjjfjefw_2K_Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_003/tkjjfjefw_2K_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/QuixelMegaScans/Surfaces/Wood_Collection/Wood_003/tkjjfjefw_2K_Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/LeverInteractableActor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/LeverInteractableActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealClassroom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Character/BP_FPCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Character/BP_FPCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Interactable/Grabbable/BP_PickupActor_Box.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Blueprints/Interactable/Grabbable/BP_PickupActor_Box.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/FPCharacter_P.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UnrealClassRoom/Maps/FPCharacter_P.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/FPCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/FPCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/LeverActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/LeverActor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/FPCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/FPCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandSkeletalMeshComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandSkeletalMeshComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/LeverActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/LeverActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +112,18 @@
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/FPCharacter.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/FPCHandComponent.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/FPCHandComponent.cpp" />
-        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandSkeletalMeshComponent.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/HandSkeletalMeshComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/GrabbableInterface.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/GrabbableInterface.h" />
-        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/UnrealClassRoomStatics.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/UnrealClassroom.Build.cs" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/LeverActor.cpp" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/LeverActor.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/PickupActor.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/LeverInteractableActor.h" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/FPCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Public/HandSkeletalMeshComponent.h" />
+        <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/LeverInteractableActor.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/FPCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/UnrealClassroom/Private/PickupActor.cpp" />
       </list>
@@ -100,6 +146,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="XThreadsFramesViewSplitterKey" value="0.41586998" />
+    <property name="settings.editor.selected.configurable" value="CppUnrealEngineOptionsId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="C++ Project.UnrealClassroom">
@@ -326,7 +373,10 @@
       <updated>1605637591948</updated>
       <workItem from="1605637594041" duration="328000" />
       <workItem from="1605637994007" duration="6084000" />
-      <workItem from="1605645274848" duration="25420000" />
+      <workItem from="1605645274848" duration="28667000" />
+      <workItem from="1605902209420" duration="12324000" />
+      <workItem from="1606042799860" duration="9860000" />
+      <workItem from="1606057303884" duration="3569000" />
     </task>
     <servers />
   </component>
@@ -352,74 +402,82 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="519" key="GridCell.Tab.0.bottom" timestamp="1605721574055">
+    <state x="1028" y="525" key="#Notifications" timestamp="1606057314546">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.0.center" timestamp="1605721574055">
+    <state x="1028" y="525" key="#Notifications/0.0.2560.1400@0.0.2560.1400" timestamp="1606057314546" />
+    <state width="2517" height="519" key="GridCell.Tab.0.bottom" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.0.left" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.0.center" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.0.right" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.0.left" timestamp="1606069511588">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.1.bottom" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511588" />
+    <state width="2517" height="519" key="GridCell.Tab.0.right" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.1.center" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.1.bottom" timestamp="1606069514763">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.1.left" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1606069514763" />
+    <state width="2517" height="519" key="GridCell.Tab.1.center" timestamp="1606069514763">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.1.right" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1606069514763" />
+    <state width="2517" height="519" key="GridCell.Tab.1.left" timestamp="1606069514763">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.2.bottom" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1606069514763" />
+    <state width="2517" height="519" key="GridCell.Tab.1.right" timestamp="1606069514763">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.2.center" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1606069514763" />
+    <state width="2517" height="519" key="GridCell.Tab.2.bottom" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.2.left" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.2.center" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.2.right" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.2.left" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.3.bottom" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.2.right" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.3.center" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.3.bottom" timestamp="1606069511590">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.3.left" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511590" />
+    <state width="2517" height="519" key="GridCell.Tab.3.center" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state width="2517" height="519" key="GridCell.Tab.3.right" timestamp="1605721574055">
+    <state width="2517" height="519" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.3.left" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="519" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605721574055" />
-    <state x="1125" y="406" key="RiderGenerateDialog" timestamp="1605732298158">
+    <state width="2517" height="519" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state width="2517" height="519" key="GridCell.Tab.3.right" timestamp="1606069511589">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1125" y="406" key="RiderGenerateDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1605732298158" />
+    <state width="2517" height="519" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1606069511589" />
+    <state x="1125" y="406" key="RiderGenerateDialog" timestamp="1606048364861">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1125" y="406" key="RiderGenerateDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1606048364861" />
+    <state x="781" y="345" key="SettingsEditor" timestamp="1605909485375">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1605909485375" />
     <state x="886" y="311" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605729449595">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -428,9 +486,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="936" y="330" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1605714304575" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1605729086068">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1605910251578">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1605729086068" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1605910251578" />
   </component>
 </project>

@@ -3,24 +3,58 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "GrabbableInterface.h"
 #include "GameFramework/Actor.h"
+#include "MovieScene/Public/MovieSceneSequencePlayer.h"
+
 #include "LeverActor.generated.h"
 
+class USphereComponent;
+
+
 UCLASS()
-class UNREALCLASSROOM_API ALeverActor : public AActor
+class UNREALCLASSROOM_API ALeverActor : public AActor, public IGrabbableInterface
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	ALeverActor();
 
-protected:
-	// Called when the game starts or when spawned
+	// Methods
+public:	
+	ALeverActor();
+	virtual void Tick(float DeltaTime) override;
+
+	virtual void GrabPressed(USceneComponent* AttachTo) override;
+	virtual void GrabReleased() override;
+	virtual int GetGrabType() override;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "[Property]: Animation")
+	void PlayAnimation(bool IsActive);
+
+	protected:
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	// Members
+	public:
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: Debug")
+	bool IsDebuggingGrab = false;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: Components")
+	UStaticMeshComponent* BaseMeshComponent;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: Components")
+	UStaticMeshComponent* LeverMeshComponent;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: Components")
+	USphereComponent* CustomAttachPoint;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: AttachBehaviour")
+	bool bSnapHandToMesh;
+
+	UPROPERTY(EditAnywhere, Category = "[Property]: AttachBehaviour")
+	TEnumAsByte<EGrabType> TypeOfGrab;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "[Property]: Function")
+	bool IsLeverInActiveMode = false;
 
 };
