@@ -47,7 +47,7 @@ void ALeverInteractableActor::GrabReleased()
         const auto Hand = Cast<UHandSkeletalMeshComponent>(AttachedHand);
         if (Hand != nullptr)
         {
-            PC->ReAttachHand(RightHand);
+            PC->ReAttachHand(Hand->HandType);
         }
     }
     else
