@@ -42,5 +42,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = "[Property]: AttachBehaviour")
 	TEnumAsByte<EGrabType> TypeOfGrab;
 
+	UPROPERTY(EditAnywhere, Category = "[Property]: AttachBehaviour")
+	USkeletalMeshComponent* AttachPositioning;
+
 
 };

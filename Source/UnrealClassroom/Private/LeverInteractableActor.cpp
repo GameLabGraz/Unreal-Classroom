@@ -29,6 +29,9 @@ ALeverInteractableActor::ALeverInteractableActor(): Super()
     CustomAttachPoint->SetCollisionResponseToAllChannels(ECR_Ignore);
     CustomAttachPoint->ShapeColor = FColor::Emerald;
     CustomAttachPoint->SetHiddenInGame(false);
+
+    AttachPositioning->SetupAttachment(LeverMeshComponent);
+    AttachPositioning->SetHiddenInGame(true);
 }
 
 void ALeverInteractableActor::GrabReleased()

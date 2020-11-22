@@ -244,12 +244,14 @@ void AFPCharacter::GrabRight(float Value)
 {
     Value = FMath::Clamp(Value, 0.0f, 1.0f);
     auto MinLocation = RightHandComponent->GetComponentLocation();
+    auto MinRotation = RightHandComponent->GetComponentRotation();
 
     if (Value < 0.01)
     {
         ResetHand(RightHand);
         MinLocation = RightHandComponent->GetComponentLocation();
-
+        MinRotation = RightHandComponent->GetComponentRotation();
+        
         if (RightGrabbedActor != nullptr)
         {
             const auto GrabTarget = Cast<IGrabbableInterface>(RightGrabbedActor);
@@ -268,9 +270,13 @@ void AFPCharacter::GrabRight(float Value)
 
         if (GrabTarget != nullptr)
         {
-            const auto MaxLocation = GrabTarget->CustomAttachPoint->GetComponentLocation();
+            // const auto MaxLocation = GrabTarget->CustomAttachPoint->GetComponentLocation();
+            const auto MaxLocation = GrabTarget->AttachPositioning->GetComponentLocation();
+            const auto MaxRotation = GrabTarget->AttachPositioning->GetComponentRotation();
             const auto NewWorldLocation = FMath::Lerp(MinLocation, MaxLocation, Value);
+            const auto NewWorldRotation = FMath::Lerp(MinRotation, MaxRotation, Value);
             RightHandComponent->SetWorldLocation(NewWorldLocation);
+            RightHandComponent->SetWorldRotation(NewWorldRotation);
 
             if (Value > 0.95f)
             {
@@ -302,12 +308,14 @@ void AFPCharacter::GrabLeft(float Value)
 {
     Value = FMath::Clamp(Value, 0.0f, 1.0f);
     auto MinLocation = LeftHandComponent->GetComponentLocation();
+    auto MinRotation = LeftHandComponent->GetComponentRotation();
 
     if (Value < 0.01)
     {
         ResetHand(LeftHand);
         MinLocation = LeftHandComponent->GetComponentLocation();
-
+        MinRotation = LeftHandComponent->GetComponentRotation();
+        
         if (LeftGrabbedActor != nullptr)
         {
             const auto GrabTarget = Cast<IGrabbableInterface>(LeftGrabbedActor);
@@ -326,9 +334,13 @@ void AFPCharacter::GrabLeft(float Value)
 
         if (GrabTarget != nullptr)
         {
-            const auto MaxLocation = GrabTarget->CustomAttachPoint->GetComponentLocation();
+            // const auto MaxLocation = GrabTarget->CustomAttachPoint->GetComponentLocation();
+            const auto MaxLocation = GrabTarget->AttachPositioning->GetComponentLocation();
+            const auto MaxRotation = GrabTarget->AttachPositioning->GetComponentRotation();
             const auto NewWorldLocation = FMath::Lerp(MinLocation, MaxLocation, Value);
+            const auto NewWorldRotation = FMath::Lerp(MinRotation, MaxRotation, Value);
             LeftHandComponent->SetWorldLocation(NewWorldLocation);
+            LeftHandComponent->SetWorldRotation(NewWorldRotation);
 
             if (Value > 0.95f)
             {
@@ -339,6 +351,8 @@ void AFPCharacter::GrabLeft(float Value)
     }
     else
     {
+        LeftHandComponent->SetRelativeLocation(InitialRelativeLocationLeftHand);
+
         auto GrabRange = MaxGrabDistance;
         if (IsGrabRaycastHit)
         {

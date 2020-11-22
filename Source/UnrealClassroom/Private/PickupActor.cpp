@@ -19,6 +19,10 @@ APickupActor::APickupActor()
     CustomAttachPoint->SetCollisionResponseToAllChannels(ECR_Ignore);
     CustomAttachPoint->ShapeColor = FColor::Emerald;
     CustomAttachPoint->SetHiddenInGame(true);
+
+    AttachPositioning = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("AttackPositioning"));
+    AttachPositioning->SetupAttachment(BaseMeshComponent);
+    AttachPositioning->SetHiddenInGame(true);
 }
 
 void APickupActor::BeginPlay()
